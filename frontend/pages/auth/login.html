@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,36 +8,31 @@
     <title>Gestão de Estágio</title>
   </head>
   <body>
-    <img
-      src="../../assets/images/LogoFatecVoto.svg"
-      alt="Logo FATEC Votorantim"
-    />
-    <h1>Gestão de Estágios</h1>
-    <p>Acesse com seus dados acadêmicos</p>
-    <form action="">
-      <div class="">
-        <label for="" class="">Email ou RA</label>
-        <input
-          type="email"
-          class=""
-          id=""
-          aria-describedby=""
-        />
+    <main>
+      <img
+        src="../../assets/images/LogoFatecVoto.svg"
+        alt="Logo FATEC Votorantim"
+      />
+      <h1>Gestão de Estágios</h1>
+      <p class="subtitulo">Acesse com seus dados acadêmicos</p>
+      <form action="">
+        <div class="form-login">
+          <label for="login" class="label-login">Email ou RA</label>
+          <input type="email" class="input-login" id="login" />
+        </div>
+        <div class="form-password">
+          <label for="password" class="label-password">Senha</label>
+          <input type="password" class="input-password" id="password" />
+        </div>
+        <button type="submit" class="btn-form-login">Login</button>
+      </form>
+      <a href="" class="btn-esqueci-senha">Esqueci minha senha</a>
+      <div class="separador">
+        <span class="linha"></span>
+        <span>ou</span>
+        <span class="linha"></span>
       </div>
-      <div class="">
-        <label for="" class="">Senha</label>
-        <input
-          type="password"
-          class=""
-          id=""
-        />
-      </div>
-      <button type="submit" class="">Login</button>
-    </form>
-    <a href="">Esqueci minha senha</a>
-    <div>
-        -------- ou ---------
-    </div>
-    <a href="">Primeiro Acesso</a>
+      <a href="" class="btn-primeiro-acesso">Primeiro Acesso</a>
+    </main>
   </body>
 </html>
