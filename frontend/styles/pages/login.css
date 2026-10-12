@@ -1,3 +1,20 @@
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 213px;
+  height: 215px;
+  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center / contain;
+  z-index: -1;
+  pointer-events: none;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -78,7 +95,7 @@ form {
 }
 
 .btn-form-login:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .btn-esqueci-senha,
@@ -137,5 +154,12 @@ form {
   .form-password .input-password {
     width: 100%;
     box-sizing: border-box;
+  }
+
+  body::before {
+    width: 500px;
+    height: 500px;
+    top: -50px;
+    left: -50px;
   }
 }
