@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/pages/cadastro.css" />
+    <link rel="stylesheet" href="../../styles/components/form.css" />
+    
+    <title>Gestão de Estágio</title>
+  </head>
+  <body>
+    <main>
+      <img
+        src="../../assets/images/LogoFatecVoto.svg"
+        alt="Logo FATEC Votorantim"
+      />
+      <h1>Cadastro</h1>
+      <p class="subtitulo">Cadastre-se com seus dados acadêmicos</p>
+      <form action="">
+        <div class="form-group">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input type="text" class="form-input" id="nome" />
+        </div>
+        <div class="form-group">
+          <label for="RA" class="form-label">RA</label>
+          <input type="text" class="form-input" id="RA" />
+        </div>
+        <div class="form-group">
+          <label for="curso" class="form-label">Curso</label>
+          <select name="curso" id="curso" class="form-input" required>
+            <option value="" disabled selected>Escolha uma opção...</option>
+            <option value="DSM">
+              Desenvolvimento de Software Multiplataforma
+            </option>
+            <option value="CDN">Ciência de Dados para Negócios</option>
+            <option value="CO">Controle de Obras</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-input" id="email" />
+        </div>
+        <div class="form-group">
+          <label for="confirm-email" class="form-label"
+            >Confirme seu Email</label
+          >
+          <input type="email" class="form-input" id="confirm-email" />
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Senha</label>
+          <input type="password" class="form-input" id="password" />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password" class="form-label"
+            >Confirme sua Senha</label
+          >
+          <input type="password" class="form-input" id="confirm-password" />
+        </div>
+        <button type="submit" class="btn-form-login">Cadastrar</button>
+      </form>
+      <a href="" class="btn-esqueci-senha">Esqueci minha senha</a>
+      <div class="separador">
+        <span class="linha"></span>
+        <span>ou</span>
+        <span class="linha"></span>
+      </div>
+      <a href="" class="btn-primeiro-acesso">Fazer Login</a>
+    </main>
+  </body>
+</html>
