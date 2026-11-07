@@ -1,3 +1,5 @@
+@import url(../global.css);
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -6,11 +8,12 @@ body {
 body::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 213px;
-  height: 215px;
-  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center / contain;
+  top: -110px;
+  right: -110px;
+  width: 300px;
+  height: 300px;
+  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center /
+    contain;
   z-index: -1;
   pointer-events: none;
 }
@@ -41,13 +44,13 @@ form {
   width: 100%;
 }
 
-.form-login {
+.form-email {
   display: flex;
   flex-direction: column;
-  .label-login {
+  .label-email {
     font-size: 12px;
   }
-  .input-login {
+  .input-email {
     display: flex;
     width: 100%;
     height: 2.875rem;
@@ -56,7 +59,6 @@ form {
     gap: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid #d1d6de;
-    background: #fff;
   }
 }
 
@@ -75,8 +77,32 @@ form {
     gap: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid #d1d6de;
-    background: #fff;
   }
+}
+
+.form-password {
+  position: relative;
+}
+
+.input-password {
+  padding-right: 44px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: url("../../assets/icons/icon-eye-closed.svg") no-repeat center /
+    contain;
+  cursor: pointer;
+}
+
+.toggle-password.is-visible {
+  background-image: url("../../assets/icons/icon-eye-open.svg");
 }
 
 .btn-form-login {
@@ -86,11 +112,12 @@ form {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: var(--Azul-Principal, #064376);
+  background: var(--primary);
   text-decoration: none;
   color: #fff;
   border-style: none;
   font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -107,13 +134,18 @@ form {
   align-items: center;
   border-radius: 12px;
   text-decoration: none;
-  color: #064376;
+  color: var(--primary);
   font-size: 14px;
 }
 
+.btn-esqueci-senha {
+  text-decoration: underline;
+}
+
 .btn-primeiro-acesso {
-  border: 1px solid #064376;
-} 
+  background-color: var(--bg);
+  font-weight: bold;
+}
 
 .separador {
   display: flex;
@@ -131,6 +163,40 @@ form {
   background-color: #758487;
 }
 
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: min(90%, 360px);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.popup-msg {
+  margin: 0 0 16px;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.popup-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: #fff;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   main {
     max-width: 420px;
@@ -145,12 +211,12 @@ form {
     font-size: 14px;
   }
 
-  .form-login .label-login,
+  .form-email .label-email,
   .form-password .label-password {
     font-size: 14px;
   }
 
-  .form-login .input-login,
+  .form-email .input-email,
   .form-password .input-password {
     width: 100%;
     box-sizing: border-box;
