@@ -107,3 +107,70 @@ form {
   outline: 2px solid #111827;
   outline-offset: 4px;
 }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: max(16px, env(safe-area-inset-top)) 16px 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.popup {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 420px);
+  padding: 16px 20px;
+  background: #fff;
+  border-left: 4px solid #b91c1c;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: popup-cair 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.popup.saindo {
+  animation: popup-subir 0.25s ease-in forwards;
+}
+
+.popup-msg {
+  flex: 1;
+  margin: 0;
+  text-align: left;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.popup-btn {
+  flex-shrink: 0;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes popup-cair {
+  from {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popup-subir {
+  to {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+}
+
