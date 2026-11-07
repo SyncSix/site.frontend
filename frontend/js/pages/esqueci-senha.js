@@ -1,9 +1,9 @@
 document.querySelectorAll("[data-voltar]").forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.dataset.voltar) {
-      window.location.href = btn.dataset.voltar;
+      window.location.href = "./login.html";
     } else {
-      window.history.back();
+      window.location.href = "./login.html";
     }
   });
 });
