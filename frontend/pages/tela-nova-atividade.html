@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/pages/tela-nova-atividade.css">
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <div class="cabecalho__topo">
+        <a class="voltar" href="../index.html">
+        <img src="../assets/icons/icon-btnVoltar.svg" alt="" width="20" height="20">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="13 8 9 12 13 16" />
+          </svg>
+          <span>SITE - Sistema Integrado de Trabalho e Estágio</span>
+        </a>
+
+        <img src="../assets/icons/icon-notificacao.svg" alt="" width="20" height="20">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+      </div>
+
+      <h1>Nova atividade</h1>
+      <p>Selecione o que deseja cadastrar</p>
+    </header>
+    <main>
+        <ul class="lista" id="lista-tipos"></ul>
+        <li class="lista">Iniciação Científica</li>
+        <li class="lista">Monitoria</li>
+        <li class="lista">Pesquisa e Extensão</li>
+        <li class="lista">Inicio do Estágio</li>
+        <li class="lista">Relatório Parcial</li>
+        <li class="lista">Término do Estágio</li>
+        <li class="lista">Termo Aditivo (mudanças de contrato)</li>
+    </main>
+    <footer>
+        <nav class="menu-inferior" aria-label="Menu principal">
+            <a href="index.html">
+                <img src="../assets/icons/icon-home.png" alt="" width="22" height="22">
+                    Início
+            </a>
+ 
+            <a href="#" class="ativo" aria-current="page">
+                 <img src="../assets/icons/icon-atividades-select.svg" alt="" width="22" height="22">
+                    Atividades
+            </a>
+ 
+             <a href="#">
+                 <img src="../assets/icons/icon-documentos.svg" alt="" width="22" height="22">
+                    Documentos
+            </a>
+ 
+            <a href="#">
+                <img src="../assets/icons/icon-user.svg" alt="" width="22" height="22">
+                Perfil
+            </a>
+        </nav>
+    </footer>
+     <script src="nova-atividade.js"></script>
+  </body>
+</html>
