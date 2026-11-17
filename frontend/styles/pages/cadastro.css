@@ -6,11 +6,12 @@ body {
 body::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 213px;
-  height: 215px;
-  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center / contain;
+  top: -110px;
+  right: -110px;
+  width: 300px;
+  height: 300px;
+  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center /
+    contain;
   z-index: -1;
   pointer-events: none;
 }
@@ -20,6 +21,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 90px;
   min-height: 100vh;
   padding: 50px 25px;
   box-sizing: border-box;
@@ -98,29 +100,114 @@ form {
   border-color: #d93025;
 }
 
-@media (min-width: 768px) {
-  main {
-    max-width: 800px; /* 420px de conteúdo + 25px de padding de cada lado */
-    margin: 0 auto;
-  }
+.menu-perfil {
+  display: flex;
+  gap: 4px;
+  margin: 0 25px;
+  padding: 6px;
+  background: #eaf2fa;
+  border-radius: 20px;
+}
 
-  h1 {
-    font-size: 28px;
-  }
+.menu-perfil button {
+  flex: 1;
+  padding: 18px 24px;
+  border: 0;
+  background: transparent;
+  color: #1a1a2e;
+  border-radius: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
 
-  .subtitulo {
-    font-size: 14px;
-  }
+.menu-perfil button:hover {
+  background: rgba(23, 107, 154, 0.12);
+}
+.menu-perfil button.ativo {
+  background: #176b9a;
+  color: #fff;
+}
 
-  body::before {
-    width: 500px;
-    height: 500px;
-    top: -50px;
-    left: -50px;
-  }
+.formularios {
+  margin-top: 24px;
+}
 
-  #logo-fatec {
-    width: 180px;
-    height: 180px;
+.form-perfil {
+  display: grid;
+  gap: 16px;
+  animation: aparecer 0.25s ease;
+}
+
+.form-perfil[hidden] {
+  display: none;
+}
+
+.form-perfil label {
+  display: grid;
+  width: 75vw;
+  gap: 6px;
+  font-size: 14px;
+  color: #1a1a2e;
+}
+
+.form-perfil input,
+.form-perfil select {
+  padding: 12px 14px;
+  border: 1px solid #c9d6e2;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.form-perfil input:focus,
+.form-perfil select:focus {
+  outline: 2px solid #176b9a;
+  border-color: transparent;
+}
+
+.form-perfil button[type="submit"] {
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #176b9a;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-voltar {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background-color: var(--primary); /* cor do ícone */
+  -webkit-mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center /
+    contain;
+  mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center / contain;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-voltar:hover {
+  background-color: #6b7280;
+}
+
+.btn-voltar:focus-visible {
+  outline: 2px solid #111827;
+  outline-offset: 4px;
 }
