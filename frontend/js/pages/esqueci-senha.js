@@ -1,3 +1,4 @@
+// Botão de voltar
 document.querySelectorAll("[data-voltar]").forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.dataset.voltar) {

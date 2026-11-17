@@ -1,21 +1,9 @@
 @import url(../global.css);
 
-body {
-  position: relative;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: -110px;
-  right: -110px;
-  width: 300px;
-  height: 300px;
-  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center /
-    contain;
-  z-index: -1;
-  pointer-events: none;
+html {
+  /* O fundo não aumenta a área rolável, mesmo deslocado para fora da tela. */
+  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat top -110px
+    right -110px / 300px 300px;
 }
 
 main {
@@ -222,10 +210,8 @@ form {
     box-sizing: border-box;
   }
 
-  body::before {
-    width: 500px;
-    height: 500px;
-    top: -50px;
-    left: -50px;
+  html {
+    background-position: top -50px left -50px;
+    background-size: 500px 500px;
   }
 }

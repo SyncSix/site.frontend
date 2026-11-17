@@ -1,18 +1,7 @@
-body {
-  /* position: relative; */
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 213px;
-  height: 215px;
-  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center / contain;
-  z-index: -1;
-  pointer-events: none;
+html {
+  /* O fundo não aumenta a área rolável, mesmo deslocado para fora da tela. */
+  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat top -110px
+    right -110px / 300px 300px;
 }
 
 main {
@@ -20,6 +9,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 90px;
   min-height: 100vh;
   padding: 50px 25px;
   box-sizing: border-box;
@@ -98,29 +88,167 @@ form {
   border-color: #d93025;
 }
 
-@media (min-width: 768px) {
-  main {
-    max-width: 800px; /* 420px de conteúdo + 25px de padding de cada lado */
-    margin: 0 auto;
-  }
+.menu-perfil {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: #eaf2fa;
+  border-radius: 20px;
+}
 
-  h1 {
-    font-size: 28px;
-  }
+.menu-perfil button {
+  flex: 1;
+  min-width: 0;
+  padding: 18px clamp(8px, 3vw, 24px);
+  border: 0;
+  background: transparent;
+  color: #1a1a2e;
+  border-radius: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
 
-  .subtitulo {
-    font-size: 14px;
-  }
+.menu-perfil button:hover {
+  background: rgba(23, 107, 154, 0.12);
+}
 
-  body::before {
-    width: 500px;
-    height: 500px;
-    top: -50px;
-    left: -50px;
-  }
+.menu-perfil button.ativo {
+  background: #176b9a;
+  color: #fff;
+}
 
-  #logo-fatec {
-    width: 180px;
-    height: 180px;
+.formularios {
+  margin-top: 24px;
+}
+
+.menu-perfil,
+.formularios,
+.separador,
+.btn-login {
+  width: 100%;
+  max-width: 470px;
+  min-width: 0;
+}
+
+.form-perfil {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  animation: aparecer 0.25s ease;
+}
+
+.form-perfil[hidden] {
+  display: none;
+}
+
+.form-perfil label {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  gap: 6px;
+  font-size: 14px;
+  color: #1a1a2e;
+}
+
+.form-perfil input,
+.form-perfil select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #c9d6e2;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.form-perfil select {
+  text-overflow: ellipsis;
+}
+
+.form-password {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.form-password input {
+  padding-right: 48px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: url("../../assets/icons/icon-eye-closed.svg") no-repeat center /
+    contain;
+  cursor: pointer;
+}
+
+.toggle-password.is-visible {
+  background-image: url("../../assets/icons/icon-eye-open.svg");
+}
+
+.toggle-password:focus-visible {
+  outline: 2px solid #176b9a;
+  outline-offset: 4px;
+}
+
+.form-perfil input:focus,
+.form-perfil select:focus {
+  outline: 2px solid #176b9a;
+  border-color: transparent;
+}
+
+.form-perfil button[type="submit"] {
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #176b9a;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-voltar {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background-color: var(--primary); /* cor do ícone */
+  -webkit-mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center /
+    contain;
+  mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center / contain;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-voltar:hover {
+  background-color: #6b7280;
+}
+
+.btn-voltar:focus-visible {
+  outline: 2px solid #111827;
+  outline-offset: 4px;
 }
