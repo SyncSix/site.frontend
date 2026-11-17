@@ -2,18 +2,6 @@
    Nova atividade - mobile first
    Primeiro o estilo do celular; no fim, os ajustes do desktop
    ========================================================= */
-
-:root {
-  --azul-escuro: #0f3b61;
-  --azul: #1b6ca8;
-  --azul-claro: #e3f1fb;
-  --fundo: #f4f6fb;
-  --cinza: #6b7280;
-  --borda: #e4e8f0;
-  --laranja: #f26a3d;
-  --raio: 14px;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,7 +11,7 @@
 body {
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--primary);
-  background: var(--bg);
+  background: var(--page);
 }
 
 button {
@@ -53,12 +41,6 @@ ul {
   stroke-linejoin: round;
   flex-shrink: 0;
 }
-
-:focus-visible {
-  outline: 3px solid var(--azul);
-  outline-offset: 2px;
-}
-
 /* ---------- Estrutura ---------- */
 
 .app {
@@ -72,13 +54,13 @@ ul {
   display: flex;
   flex-direction: column;
   padding-bottom: 84px; /* espaço para o menu de baixo não cobrir os cartões */
-  background: var(--bg);
+  background: var(--page);
 }
 
 /* ---------- Topo ---------- */
 
 .topo {
-  background: var(--bg);
+  background: #ffffff;
   padding: 16px 20px 18px;
 }
 
@@ -155,9 +137,9 @@ h1 {
   gap: 10px;
   padding: 18px 20px;
   text-align: left;
-  background: var(--bg);
-  border: 1px solid var(--borda);
-  border-radius: var(--raio);
+  background: #ffffff;
+  border: 1px solid var(--track);
+  border-radius: 14px;
   box-shadow: 0 1px 3px rgba(15, 58, 95, 0.06);
   transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
@@ -196,8 +178,8 @@ h1 {
 }
 
 .cartao.selecionado {
-  border-color: var(--primary);
-  background: var(--azul-claro);
+  border-color: var(--primary-dark);
+  background: var(--primary);
 }
 
 /* ---------- Menu de baixo (celular) ---------- */
@@ -214,6 +196,10 @@ h1 {
 }
 
 .menu-marca {
+  display: none;
+}
+
+.menu-titulo {
   display: none;
 }
 
@@ -250,7 +236,7 @@ h1 {
   max-width: calc(100% - 32px);
   padding: 12px 18px;
   border-radius: 10px;
-  background: var(--azul-escuro);
+  background: var(--primary-dark);
   color: var(--bg);
   font-size: 0.8125rem;
   text-align: center;
@@ -291,7 +277,7 @@ h1 {
     flex-direction: column;
     gap: 32px;
     padding: 32px 16px;
-    background: var(--azul-escuro);
+    background: var(--primary-dark);
     border-top: 0;
   }
 
@@ -302,6 +288,13 @@ h1 {
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 0.04em;
+  }
+
+  .menu-titulo {
+    display: block;
+    color: #ffffff;
+    font-size: 1rem;;
+    font-weight: 200;
   }
 
   .menu-lista {
