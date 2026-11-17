@@ -1,19 +1,7 @@
-body {
-  /* position: relative; */
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: -110px;
-  right: -110px;
-  width: 300px;
-  height: 300px;
-  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat center /
-    contain;
-  z-index: -1;
-  pointer-events: none;
+html {
+  /* O fundo não aumenta a área rolável, mesmo deslocado para fora da tela. */
+  background: url("../../assets/icons/icon-fundo-bg.svg") no-repeat top -110px
+    right -110px / 300px 300px;
 }
 
 main {
@@ -103,7 +91,6 @@ form {
 .menu-perfil {
   display: flex;
   gap: 4px;
-  margin: 0 25px;
   padding: 6px;
   background: #eaf2fa;
   border-radius: 20px;
@@ -111,7 +98,8 @@ form {
 
 .menu-perfil button {
   flex: 1;
-  padding: 18px 24px;
+  min-width: 0;
+  padding: 18px clamp(8px, 3vw, 24px);
   border: 0;
   background: transparent;
   color: #1a1a2e;
@@ -125,6 +113,7 @@ form {
 .menu-perfil button:hover {
   background: rgba(23, 107, 154, 0.12);
 }
+
 .menu-perfil button.ativo {
   background: #176b9a;
   color: #fff;
@@ -134,8 +123,18 @@ form {
   margin-top: 24px;
 }
 
+.menu-perfil,
+.formularios,
+.separador,
+.btn-login {
+  width: 100%;
+  max-width: 470px;
+  min-width: 0;
+}
+
 .form-perfil {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
   animation: aparecer 0.25s ease;
 }
@@ -146,7 +145,8 @@ form {
 
 .form-perfil label {
   display: grid;
-  width: 75vw;
+  width: 100%;
+  min-width: 0;
   gap: 6px;
   font-size: 14px;
   color: #1a1a2e;
@@ -154,10 +154,51 @@ form {
 
 .form-perfil input,
 .form-perfil select {
+  width: 100%;
+  min-width: 0;
   padding: 12px 14px;
   border: 1px solid #c9d6e2;
   border-radius: 10px;
   font: inherit;
+}
+
+.form-perfil select {
+  text-overflow: ellipsis;
+}
+
+.form-password {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.form-password input {
+  padding-right: 48px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: url("../../assets/icons/icon-eye-closed.svg") no-repeat center /
+    contain;
+  cursor: pointer;
+}
+
+.toggle-password.is-visible {
+  background-image: url("../../assets/icons/icon-eye-open.svg");
+}
+
+.toggle-password:focus-visible {
+  outline: 2px solid #176b9a;
+  outline-offset: 4px;
 }
 
 .form-perfil input:focus,
