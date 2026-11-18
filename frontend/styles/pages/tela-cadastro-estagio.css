@@ -1,0 +1,90 @@
+/* =========================================================
+   Cadastro de Estágio - etapa 1 (Tipo)
+   Usa por baixo o CSS da tela Nova atividade (menu, topo,
+   cartões e aviso). Aqui ficam só os ajustes desta tela.
+   ========================================================= */
+
+/* Cores que o CSS da Nova atividade usa mas o global.css não define.
+   Ficam aqui para esta tela aparecer certa sem mexer nos outros arquivos. */
+:root {
+  --cinza: #6b7c8f;
+  --borda: #d9e2ea;
+  --azul-claro: var(--info-bg);
+}
+
+/* Uma coluna só, com largura boa de leitura no desktop */
+.lista-tipos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.grupo-tipos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Cartões desta tela têm só o título */
+.lista-tipos .cartao {
+  width: 100%;
+  padding: 16px 20px;
+}
+
+.lista-tipos .cartao-titulo {
+  color: var(--primary-dark);
+}
+
+.lista-tipos .cartao:focus-visible,
+.botao-continuar:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Cartão escolhido: fundo azul e texto branco (legível) */
+.lista-tipos .cartao.selecionado .cartao-titulo {
+  color: #ffffff;
+}
+
+/* Aviso "Plano de Atividades acompanha o termo" */
+.info {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--info-bg);
+  color: var(--primary);
+  font-size: 0.8125rem;
+}
+
+/* Botão Continuar */
+.botao-continuar {
+  width: 100%;
+  height: 48px;
+  margin-top: 4px;
+  border-radius: 24px;
+  background: var(--btn-primary);
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.botao-continuar:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.botao-continuar:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (min-width: 900px) {
+  .info {
+    font-size: 0.875rem;
+  }
+
+  .lista-tipos .cartao {
+    padding: 20px 24px;
+  }
+}
