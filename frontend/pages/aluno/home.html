@@ -1,15 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../../styles/global.css">
-    <link rel="stylesheet" href="../../styles/pages/aluno/home.css">
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/pages/aluno/home.css" />
 
     <title>Gestão de Estágios</title>
 </head>
 <body>
     
 </body>
+</html>  </head>
+  <body>
+    <header>
+      <span class="info-SITE"
+        >SITE - Sistema Integrado de Trabalho e Estágio</span
+      >
+      <div class="header-info">
+        <div class="header-info-text">
+          <h2>Olá, aluno!</h2>
+          <p>Acompanhe suas horas e pendências</p>
+        </div>
+        <div class="header-info-icon">
+          <img
+            src="../../assets/icons/icon-notificacao-on.svg"
+            alt="Notificações existentes"
+          />
+        </div>
+      </div>
+    </header>
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="#inicio" class="bottom-nav__item is-active" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+          />
+        </svg>
+        <span>Início</span>
+      </a>
+
+      <a href="#atividades" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2" />
+          <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
+        </svg>
+        <span>Atividades</span>
+      </a>
+
+      <a href="#documentos" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"
+          />
+          <path d="M14 3v5h5M9 13h6M9 17h6" />
+        </svg>
+        <span>Documentos</span>
+      </a>
+
+      <a href="#perfil" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+        </svg>
+        <span>Perfil</span>
+      </a>
+    </nav>
+
+    <script src="../../js/pages/aluno/home.js"></script>
+  </body>
 </html>
