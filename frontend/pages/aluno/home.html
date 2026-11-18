@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="../../styles/pages/aluno/home.css" />
 
     <title>Gestão de Estágios</title>
-</head>
-<body>
-    
-</body>
-</html>  </head>
+  </head>
   <body>
     <header>
       <span class="info-SITE"
@@ -31,6 +27,48 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <section
+        class="progress-card"
+        aria-labelledby="progress-title"
+        data-total="240"
+        data-done="120"
+      >
+        <h2 id="progress-title" class="progress-card__title">Seu progresso</h2>
+        <p class="progress-card__subtitle">
+          Um passo mais perto da sua formação.
+        </p>
+
+        <p class="progress-card__hours">
+          <span data-done-text>120</span> /
+          <span data-total-text>240</span> horas
+        </p>
+
+        <div
+          class="progress-card__bar"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="50"
+          aria-label="Progresso da formação"
+        >
+          <div class="progress-card__fill"></div>
+        </div>
+
+        <div class="progress-card__stats">
+          <div>
+            <strong><span data-percent>50</span>% concluído</strong>
+            <small><span data-done-text>120</span> horas validadas</small>
+          </div>
+          <div>
+            <strong><span data-remaining>120</span>h restantes</strong>
+            <small>Até a conclusão</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <nav class="bottom-nav" aria-label="Navegação principal">
       <a href="#inicio" class="bottom-nav__item is-active" aria-current="page">
         <svg viewBox="0 0 24 24" aria-hidden="true">
