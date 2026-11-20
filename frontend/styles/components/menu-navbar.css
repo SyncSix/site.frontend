@@ -1,3 +1,10 @@
+:root {
+  --nav-bg: #ffffff;
+  --nav-text: #748798;
+  --nav-active: #126C9F;
+  --nav-active-bg: #EAF4FB;
+}
+
 /* Menu de Navegação */
 .bottom-nav {
   position: fixed;
