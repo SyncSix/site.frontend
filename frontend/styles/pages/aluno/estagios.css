@@ -1,0 +1,232 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+     padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.atividades {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+  margin-inline: 25px;
+  padding-bottom: 16px;
+}
+
+/* Resumo */
+.resumo-atividades {
+  display: flex;
+  gap: 12px;
+}
+
+.card-resumo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px 8px;
+}
+
+.card-resumo-num {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1b2432;
+}
+
+.card-resumo-text {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+/* Busca */
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.busca img {
+  width: 16px;
+  height: 16px;
+}
+
+.busca input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.busca input::placeholder {
+  color: #7a8294;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filtros::-webkit-scrollbar {
+  display: none;
+}
+
+.filtro {
+  flex-shrink: 0;
+  border: 1px solid #e3e7ee;
+  background: #fff;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+  cursor: pointer;
+}
+
+.filtro--ativo {
+  background: #1b2432;
+  border-color: #1b2432;
+  color: #fff;
+}
+
+.modalidades {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7a8294;
+}
+
+/* Lista */
+.lista-atividades {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-atividade {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px 14px;
+}
+
+.card-atividade-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.card-atividade-tipo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #7a8294;
+}
+
+.card-atividade-tipo img {
+  width: 20px;
+  height: 20px;
+}
+
+.status {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.status--andamento {
+  background: #e3eefa;
+  color: #1f6f9c;
+}
+
+.status--analise {
+  background: #fdf0d5;
+  color: #d98a1c;
+}
+
+.status--correcao {
+  background: #fde8ea;
+  color: #d9534f;
+}
+
+.card-atividade-titulo {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b2432;
+}
+
+.card-atividade-info {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #7a8294;
+}
+
+.card-atividade-horas {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #1f6f9c;
+}
+
+.barra {
+  height: 6px;
+  background: #e3e7ee;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.barra-preenchimento {
+  height: 100%;
+  background: #1f6f9c;
+  border-radius: 999px;
+}
+
+.ver-detalhes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #1f6f9c;
+  text-decoration: none;
+}
+
+.ver-detalhes img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Botão fixo */
+.btn-nova-atividade {
+  position: sticky;
+  bottom: 16px;
+  display: block;
+  background: #1f6f9c;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 16px;
+}
