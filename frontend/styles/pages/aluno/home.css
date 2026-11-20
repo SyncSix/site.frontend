@@ -1,5 +1,6 @@
 body {
     background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
 }
 
 :root {
@@ -12,15 +13,7 @@ body {
   --card-fill: #f47c3c;
 }
 
-/* Evita que o conteúdo fique escondido atrás da navbar */
-body {
-  padding-bottom: calc(76px + env(safe-area-inset-bottom));
-}
 
-/* Cabeçalho */
-
-
-/* Conteúdo Principal */
 main {
     margin-inline: 25px;
 }
