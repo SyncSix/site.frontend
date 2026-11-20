@@ -151,6 +151,15 @@ main {
 
 
 /* Seção próxima ação */
+.proxima-acao {
+  margin-top: 14px;
+}
+
+.proxima-acao h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .card-proxima-acao {
   display: flex;
   flex-direction: column;
@@ -196,4 +205,46 @@ main {
   font-size: 15px;
   padding-block: 13px;
   border-radius: 20px;
+}
+
+
+/* Ações Rápidas */
+.acoes-rapidas {
+  margin-top: 14px;
+}
+
+.acoes-rapidas h3 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cards-acoes-rapidas {
+  display: flex;
+  gap: 12px;
+}
+
+.cards-acoes-rapidas .card {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 28px;
+  padding: 28px 20px 26px;
+  text-decoration: none;
+}
+
+.cards-acoes-rapidas .card img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 18px;
+}
+
+.cards-acoes-rapidas .card p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b2432;
 }
