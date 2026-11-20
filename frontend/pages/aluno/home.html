@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="../../styles/global.css" />
     <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
+    <link rel="stylesheet" href="../../styles/components/card-estagio.css" />
     <link rel="stylesheet" href="../../styles/pages/aluno/home.css" />
 
     <title>Gestão de Estágios</title>
@@ -89,7 +90,9 @@
             <img src="../../assets/icons/icon-alert.svg" alt="Icon Alerta" />
             <p>Documento requer atenção</p>
           </div>
-          <p class="text-card-proxima-acao">Confira o documento pendente e envie a correção, se necessária.</p>
+          <p class="text-card-proxima-acao">
+            Confira o documento pendente e envie a correção, se necessária.
+          </p>
           <a href="" class="btn-card-proxima-acao">Ver documentos</a>
         </div>
       </section>
@@ -98,16 +101,50 @@
         <h3>Ações rápidas</h3>
         <div class="cards-acoes-rapidas">
           <a href="" class="card">
-            <img src="../../assets/icons/icon-plus.svg" alt="Icon Plus">
+            <img src="../../assets/icons/icon-plus.svg" alt="Icon Plus" />
             <p>Nova atividade</p>
           </a>
           <a href="" class="card">
-            <img src="../../assets/icons/icon-chart.svg" alt="Icon Chart">
+            <img src="../../assets/icons/icon-chart.svg" alt="Icon Chart" />
             <p>Meu progresso</p>
           </a>
         </div>
       </section>
 
+      <section class="estagio-atual">
+        <h3>Estágio atual</h3>
+
+        <div class="card-estagio">
+          <div class="estagio-header">
+            <img
+              src="../../assets/icons/icon-atividades-select.svg"
+              alt="Icon Maleta"
+            />
+            <h4>Tech Solutions Ltda.</h4>
+          </div>
+
+          <p class="estagio-cargo">
+            Desenvolvedor de Software · 30 horas semanais
+          </p>
+
+          <p class="estagio-horas">120h validadas de 240h</p>
+
+          <div
+            class="estagio-barra"
+            role="progressbar"
+            aria-valuenow="120"
+            aria-valuemin="0"
+            aria-valuemax="240"
+          >
+            <div class="estagio-barra-preenchimento" style="width: 50%"></div>
+          </div>
+
+          <p class="estagio-info">Termo de compromisso aprovado · 02/10/2026</p>
+          <p class="estagio-info">
+            Relatório parcial: 24 horas adicionadas · 30/09/2026
+          </p>
+        </div>
+      </section>
     </main>
 
     <nav class="bottom-nav" aria-label="Navegação principal">
