@@ -3,181 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
     <link rel="stylesheet" href="../../styles/global.css" />
-    <link
-      rel="stylesheet"
-      href="../../styles/pages/aluno/tela-nova-atividade.css"
-    />
+    <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
+    <link rel="stylesheet" href="../../styles/components/header.css" />
+    <link rel="stylesheet" href="../../styles/components/btn-voltar.css" />
+    <link rel="stylesheet" href="../../styles/pages/aluno/nova-atividade.css" />
+
+    <title>Gestão de Estágios</title>
   </head>
 
   <body>
-    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <symbol id="i-voltar" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M13 8l-4 4 4 4" />
-      </symbol>
-      <symbol id="i-sino" viewBox="0 0 24 24">
-        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
-      </symbol>
-      <symbol id="i-inicio" viewBox="0 0 24 24">
-        <path d="M3 11l9-8 9 8" />
-        <path d="M5 10v10h14V10" />
-        <path d="M10 20v-6h4v6" />
-      </symbol>
-      <symbol id="i-atividades" viewBox="0 0 24 24">
-        <rect x="3" y="7" width="18" height="13" rx="2" />
-        <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
-        <path d="M3 13h18" />
-      </symbol>
-      <symbol id="i-documentos" viewBox="0 0 24 24">
-        <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
-        <path d="M14 3v5h5" />
-        <path d="M9 13h6M9 17h6" />
-      </symbol>
-      <symbol id="i-perfil" viewBox="0 0 24 24">
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 21a8 8 0 0 1 16 0" />
-      </symbol>
-    </svg>
-
-    <div class="app">
-      <!-- Menu: embaixo no celular, na lateral no desktop -->
-      <nav class="menu" aria-label="Menu principal">
-        <div class="menu-marca">Fatec | Votorantim</div>
-        <div class="menu-titulo">GESTÃO DE ESTÁGIOS</div>
-        <ul class="menu-lista">
-          <li>
-            <a class="menu-item" href="#">
-              <svg class="icone" aria-hidden="true">
-                <use href="#i-inicio" />
-              </svg>
-              <span>Início</span>
-            </a>
-          </li>
-          <li>
-            <a class="menu-item" href="#" aria-current="page">
-              <svg class="icone" aria-hidden="true">
-                <use href="#i-atividades" />
-              </svg>
-              <span>Atividades</span>
-            </a>
-          </li>
-          <li>
-            <a class="menu-item" href="#">
-              <svg class="icone" aria-hidden="true">
-                <use href="#i-documentos" />
-              </svg>
-              <span>Documentos</span>
-            </a>
-          </li>
-          <li>
-            <a class="menu-item" href="#">
-              <svg class="icone" aria-hidden="true">
-                <use href="#i-perfil" />
-              </svg>
-              <span>Perfil</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="pagina">
-        <header class="topo">
-          <button class="voltar" id="btn-voltar" type="button">
-            <svg class="icone" aria-hidden="true"><use href="#i-voltar" /></svg>
-            <span>SITE - Sistema Integrado de Trabalho e Estágio</span>
-          </button>
-
-          <div class="titulo-linha">
-            <h1>Nova atividade</h1>
-            <button
-              class="sino"
-              type="button"
-              aria-label="Notificações (há novas)"
-            >
-              <svg class="icone" aria-hidden="true"><use href="#i-sino" /></svg>
-            </button>
-          </div>
-
-          <p class="subtitulo">Selecione o que deseja cadastrar</p>
-        </header>
-
-        <main class="lista">
-          <button
-            class="cartao"
-            type="button"
-            data-tipo="estagio"
-            data-nome="Estágio"
-          >
-            <span class="cartao-titulo">Estágio</span>
-            <span class="cartao-texto"
-              >Atividade profissional supervisionada</span
-            >
-            <span class="cartao-acao"
-              >Selecionar <span class="seta">→</span></span
-            >
-          </button>
-
-          <button
-            class="cartao"
-            type="button"
-            data-tipo="equivalencia"
-            data-nome="Equivalência"
-          >
-            <span class="cartao-titulo">Equivalência</span>
-            <span class="cartao-texto">Reconhecimento de horas acadêmicas</span>
-            <span class="cartao-acao"
-              >Selecionar <span class="seta">→</span></span
-            >
-          </button>
-
-          <button
-            class="cartao"
-            type="button"
-            data-tipo="iniciacao"
-            data-nome="Iniciação Científica"
-          >
-            <span class="cartao-titulo">Iniciação Científica</span>
-            <span class="cartao-texto">Projeto de investigação acadêmica</span>
-            <span class="cartao-acao"
-              >Selecionar <span class="seta">→</span></span
-            >
-          </button>
-
-          <button
-            class="cartao"
-            type="button"
-            data-tipo="monitoria"
-            data-nome="Monitoria"
-          >
-            <span class="cartao-titulo">Monitoria</span>
-            <span class="cartao-texto">Apoio a atividades de ensino</span>
-            <span class="cartao-acao"
-              >Selecionar <span class="seta">→</span></span
-            >
-          </button>
-
-          <button
-            class="cartao"
-            type="button"
-            data-tipo="pesquisa"
-            data-nome="Pesquisa e Extensão"
-          >
-            <span class="cartao-titulo">Pesquisa e Extensão</span>
-            <span class="cartao-texto">Projeto de pesquisa ou extensão</span>
-            <span class="cartao-acao"
-              >Selecionar <span class="seta">→</span></span
-            >
-          </button>
-        </main>
+    <header>
+      <span class="info-SITE">
+        <button
+          type="button"
+          class="btn-voltar"
+          aria-label="Voltar"
+          data-voltar="estagios.html"
+        ></button>
+        SITE - Sistema Integrado de Trabalho e Estágio
+      </span>
+      <div class="header-info">
+        <div class="header-info-text">
+          <h2>Meus estágios</h2>
+          <p>Acompanhe suas horas e pendências</p>
+        </div>
+        <div class="header-info-icon">
+          <img
+            src="../../assets/icons/icon-notificacao-on.svg"
+            alt="Notificações existentes"
+          />
+        </div>
       </div>
-    </div>
+    </header>
 
-    <!-- Mensagem rápida que aparece embaixo -->
-    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+    <main>
+      <section class="modalidades-lista">
+        <a href="" class="card-modalidade">
+          <h3>Estágio</h3>
+          <p>Atividade profissional supervisionada</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
 
-    <script src="nova-atividade.js"></script>
+        <a href="" class="card-modalidade">
+          <h3>Equivalência</h3>
+          <p>Reconhecimento de horas acadêmicas</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true"> → </span></span
+          >
+        </a>
+
+        <a href="" class="card-modalidade">
+          <h3>Iniciação Científica</h3>
+          <p>Projeto de investigação acadêmica</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
+
+        <a href="" class="card-modalidade">
+          <h3>Monitoria</h3>
+          <p>Apoio a atividades de ensino</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
+
+        <a href="" class="card-modalidade">
+          <h3>Pesquisa e Extensão</h3>
+          <p>Projeto de pesquisa ou extensão</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="home.html" class="bottom-nav__item" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+          />
+        </svg>
+        <span>Início</span>
+      </a>
+
+      <a href="estagios.html" class="bottom-nav__item is-active">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2" />
+          <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
+        </svg>
+        <span>Estágios</span>
+      </a>
+
+      <a href="#documentos" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"
+          />
+          <path d="M14 3v5h5M9 13h6M9 17h6" />
+        </svg>
+        <span>Documentos</span>
+      </a>
+
+      <a href="#perfil" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+        </svg>
+        <span>Perfil</span>
+      </a>
+    </nav>
+
+    <script src="../../js/pages/aluno/nova-atividade.js"></script>
+    <script src="../../js/components/menu-navbar.js"></script>
+    <script src="../../js/components/btn-voltar.js"></script>
   </body>
 </html>
