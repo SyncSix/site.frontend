@@ -1,22 +1,36 @@
+const inputBusca = document.getElementById("busca-aluno");
 const selectCurso = document.getElementById("curso");
 const selectTurma = document.getElementById("turma");
 const filtrosSituacao = document.querySelectorAll(".situacao .filtro");
 const cardsAlunos = document.querySelectorAll(".item-aluno");
 const semResultados = document.querySelector(".sem-resultados");
 
+// Remove acentos e ignora maiúsculas/minúsculas
+function normalizar(texto) {
+  return texto
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
 function aplicarFiltros() {
   const situacao = document.querySelector(".situacao .filtro--ativo").dataset.filtro;
   const curso = selectCurso.value;
   const turma = selectTurma.value;
+  const termo = normalizar(inputBusca.value);
 
   let visiveis = 0;
 
   cardsAlunos.forEach((card) => {
+    const nome = normalizar(card.querySelector("h3").textContent);
+
     const bateSituacao = situacao === "todos" || card.dataset.situacao === situacao;
     const bateCurso = !curso || card.dataset.curso === curso;
     const bateTurma = !turma || card.dataset.turma === turma;
+    const bateNome = !termo || nome.includes(termo);
 
-    const visivel = bateSituacao && bateCurso && bateTurma;
+    const visivel = bateSituacao && bateCurso && bateTurma && bateNome;
     card.hidden = !visivel;
 
     if (visivel) visiveis++;
@@ -42,3 +56,6 @@ filtrosSituacao.forEach((btn) => {
 // Selects de curso e turma
 selectCurso.addEventListener("change", aplicarFiltros);
 selectTurma.addEventListener("change", aplicarFiltros);
+
+// Busca por nome (filtra enquanto digita)
+inputBusca.addEventListener("input", aplicarFiltros);
