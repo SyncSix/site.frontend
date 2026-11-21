@@ -79,10 +79,38 @@
         <p class="rotulo">Situação</p>
 
         <div class="filtros">
-          <button class="filtro filtro--ativo" type="button">Todos</button>
-          <button class="filtro" type="button">Estágio</button>
-          <button class="filtro" type="button">Equivalência</button>
-          <button class="filtro" type="button">Pendentes</button>
+          <button
+            class="filtro filtro--ativo"
+            type="button"
+            aria-pressed="true"
+            data-filtro="todos"
+          >
+            Todos
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            aria-pressed="false"
+            data-filtro="estagio"
+          >
+            Estágio
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            aria-pressed="false"
+            data-filtro="equivalencia"
+          >
+            Equivalência
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            aria-pressed="false"
+            data-filtro="pendente"
+          >
+            Pendentes
+          </button>
         </div>
       </section>
 
@@ -92,16 +120,16 @@
 
       <!-- Lista de alunos -->
       <section class="alunos">
-        <article class="item-aluno">
+        <article class="item-aluno" data-situacao="estagio">
           <h3>Ana Beatriz</h3>
-          <p class="item-aluno-status">Em andamento</p>
+          <p class="item-aluno-status">Estágio</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
           <a href="" class="item-aluno-link"
             >Visualizar ficha <span aria-hidden="true">›</span></a
           >
         </article>
 
-        <article class="item-aluno">
+        <article class="item-aluno" data-situacao="equivalencia">
           <h3>Eliane Rocha</h3>
           <p class="item-aluno-status">Equivalência</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
@@ -110,7 +138,7 @@
           >
         </article>
 
-        <article class="item-aluno">
+        <article class="item-aluno" data-situacao="estagio">
           <h3>Lucas Almeida</h3>
           <p class="item-aluno-status">Estágio</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
@@ -119,7 +147,7 @@
           >
         </article>
 
-        <article class="item-aluno">
+        <article class="item-aluno" data-situacao="pendente">
           <h3>Mariana Souza</h3>
           <p class="item-aluno-status">Pendente</p>
           <p class="item-aluno-carga">Carga horária exigida: 120h</p>
@@ -128,9 +156,9 @@
           >
         </article>
 
-        <article class="item-aluno">
+        <article class="item-aluno" data-situacao="equivalencia">
           <h3>Rafael Mendes</h3>
-          <p class="item-aluno-status">Em andamento</p>
+          <p class="item-aluno-status">Equivalência</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
           <a href="" class="item-aluno-link"
             >Visualizar ficha <span aria-hidden="true">›</span></a
