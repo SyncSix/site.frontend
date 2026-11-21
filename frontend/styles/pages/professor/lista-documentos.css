@@ -165,3 +165,26 @@ body {
   display: none;
 }
 
+.item-aluno .status {
+  margin-bottom: 12px;
+}
+
+/* Status documentos */
+.status {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.status--analise {
+  background: #fdf0d5;
+  color: #d98a1c;
+}
+
+.status--correcao {
+  background: #fde8ea;
+  color: #d9534f;
+}
+

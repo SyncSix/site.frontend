@@ -103,14 +103,6 @@
             class="filtro"
             type="button"
             aria-pressed="false"
-            data-filtro="aprovado"
-          >
-            Aprovados
-          </button>
-          <button
-            class="filtro"
-            type="button"
-            aria-pressed="false"
             data-filtro="correcao"
           >
             Correção
@@ -131,7 +123,7 @@
           data-turma="2"
         >
           <h3>Termo de compromisso</h3>
-          <p class="item-aluno-status">Aguardando análise</p>
+          <span class="status status--analise">Aguardando análise</span>
           <p class="item-aluno-info">Aluno: Ana Beatriz</p>
           <p class="item-aluno-info">
             Curso: Desenvolvimento de Software Multiplataforma · 2º semestre
@@ -144,12 +136,12 @@
 
         <article
           class="item-aluno"
-          data-situacao="aprovado"
+          data-situacao="analise"
           data-curso="CDN"
           data-turma="4"
         >
           <h3>Relatório parcial</h3>
-          <p class="item-aluno-status">Aprovado</p>
+          <span class="status status--analise">Aguardando análise</span>
           <p class="item-aluno-info">Aluno: Eliane Rocha</p>
           <p class="item-aluno-info">
             Curso: Ciência de Dados para Negócios · 4º semestre
@@ -167,7 +159,7 @@
           data-turma="3"
         >
           <h3>Plano de atividades</h3>
-          <p class="item-aluno-status">Correção solicitada</p>
+          <span class="status status--correcao">Correção solicitada</span>
           <p class="item-aluno-info">Aluno: Lucas Almeida</p>
           <p class="item-aluno-info">
             Curso: Desenvolvimento de Software Multiplataforma · 3º semestre
@@ -185,7 +177,7 @@
           data-turma="1"
         >
           <h3>Declaração de equivalência</h3>
-          <p class="item-aluno-status">Aguardando análise</p>
+          <span class="status status--analise">Aguardando análise</span>
           <p class="item-aluno-info">Aluno: Mariana Souza</p>
           <p class="item-aluno-info">Curso: Engenharia Civil · 1º semestre</p>
           <p class="item-aluno-carga">Enviado em: 02/10/2026</p>
@@ -196,12 +188,12 @@
 
         <article
           class="item-aluno"
-          data-situacao="aprovado"
+          data-situacao="correcao"
           data-curso="CO"
           data-turma="5"
         >
           <h3>Relatório final</h3>
-          <p class="item-aluno-status">Aprovado</p>
+          <span class="status status--correcao">Correção solicitada</span>
           <p class="item-aluno-info">Aluno: Rafael Mendes</p>
           <p class="item-aluno-info">Curso: Controle de Obras · 5º semestre</p>
           <p class="item-aluno-carga">Enviado em: 20/09/2026</p>
@@ -217,7 +209,7 @@
           data-turma="2"
         >
           <h3>Relatório parcial</h3>
-          <p class="item-aluno-status">Correção solicitada</p>
+          <span class="status status--correcao">Correção solicitada</span>
           <p class="item-aluno-info">Aluno: Gabriel Ferreira</p>
           <p class="item-aluno-info">
             Curso: Desenvolvimento de Software Multiplataforma · 2º semestre
