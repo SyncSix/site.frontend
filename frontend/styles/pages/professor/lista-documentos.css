@@ -1,0 +1,167 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.rotulo {
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #7a8294;
+}
+
+/* Filros */
+.filtros {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filtros::-webkit-scrollbar {
+  display: none;
+}
+
+.filtro {
+  flex-shrink: 0;
+  border: 1px solid #e3e7ee;
+  background: #fff;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+  cursor: pointer;
+}
+
+.filtro--ativo {
+  background: #1b2432;
+  border-color: #1b2432;
+  color: #fff;
+}
+
+/* Variação compacta */
+.filtros--compactos {
+  gap: 6px;
+}
+
+.filtros--compactos .filtro {
+  padding: 4px 14px;
+  font-size: 12px;
+}
+
+.filtros--compactos .filtro--ativo {
+  background: #1f6f9c;
+  border-color: #1f6f9c;
+}
+
+/* Menu Dropdown */
+.selects {
+  display: flex;
+  gap: 12px;
+}
+
+.campo-select {
+  flex: 1;
+  min-width: 0;
+}
+
+.campo-select label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.campo-select select {
+  width: 100%;
+  appearance: none;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b2432' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center / 16px;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  padding: 14px 36px 14px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+/* Lista de Cards */
+.lista-alunos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 14px 25px;
+}
+
+.alunos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item-aluno {
+  background: #fff;
+  border-radius: 20px;
+  padding: 18px 16px;
+}
+
+.item-aluno[hidden] {
+  display: none;
+}
+
+.item-aluno h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.item-aluno-status {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #1f6f9c;
+}
+
+.item-aluno-info {
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #7a8294;
+}
+
+.item-aluno-carga {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: #7a8294;
+}
+
+.item-aluno-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f6f9c;
+  text-decoration: none;
+}
+
+.aviso-lista {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7a8294;
+}
+
+.sem-resultados {
+  margin: 0;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #7a8294;
+}
+
+.sem-resultados[hidden] {
+  display: none;
+}
+
