@@ -49,7 +49,7 @@
           <div class="campo-select">
             <label for="curso">Curso</label>
             <select id="curso">
-              <option value="" disabled selected>Todos os cursos</option>
+              <option value="" selected>Todos os cursos</option>
               <option value="DSM">
                 Desenvolvimento de Software Multiplataforma
               </option>
@@ -62,7 +62,7 @@
           <div class="campo-select">
             <label for="turma">Turma</label>
             <select id="turma">
-              <option value="" disabled selected>Todas as turmas</option>
+              <option value="" selected>Todas as turmas</option>
               <option value="1">1º semestre</option>
               <option value="2">2º semestre</option>
               <option value="3">3º semestre</option>
@@ -120,45 +120,84 @@
 
       <!-- Lista de alunos -->
       <section class="alunos">
-        <article class="item-aluno" data-situacao="estagio">
+        <article
+          class="item-aluno"
+          data-situacao="estagio"
+          data-curso="DSM"
+          data-turma="2"
+        >
           <h3>Ana Beatriz</h3>
           <p class="item-aluno-status">Estágio</p>
+          <p class="item-aluno-info">
+            Curso: Desenvolvimento de Software Multiplataforma
+          </p>
+          <p class="item-aluno-info">Turma: 2º semestre</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
           <a href="" class="item-aluno-link"
             >Visualizar ficha <span aria-hidden="true">›</span></a
           >
         </article>
 
-        <article class="item-aluno" data-situacao="equivalencia">
+        <article
+          class="item-aluno"
+          data-situacao="equivalencia"
+          data-curso="CDN"
+          data-turma="4"
+        >
           <h3>Eliane Rocha</h3>
           <p class="item-aluno-status">Equivalência</p>
+          <p class="item-aluno-info">Curso: Ciência de Dados para Negócios</p>
+          <p class="item-aluno-info">Turma: 4º semestre</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
           <a href="" class="item-aluno-link"
             >Visualizar ficha <span aria-hidden="true">›</span></a
           >
         </article>
 
-        <article class="item-aluno" data-situacao="estagio">
+        <article
+          class="item-aluno"
+          data-situacao="estagio"
+          data-curso="DSM"
+          data-turma="3"
+        >
           <h3>Lucas Almeida</h3>
           <p class="item-aluno-status">Estágio</p>
+          <p class="item-aluno-info">
+            Curso: Desenvolvimento de Software Multiplataforma
+          </p>
+          <p class="item-aluno-info">Turma: 3º semestre</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
           <a href="" class="item-aluno-link"
             >Visualizar ficha <span aria-hidden="true">›</span></a
           >
         </article>
 
-        <article class="item-aluno" data-situacao="pendente">
+        <article
+          class="item-aluno"
+          data-situacao="pendente"
+          data-curso="ENGC"
+          data-turma="1"
+        >
           <h3>Mariana Souza</h3>
           <p class="item-aluno-status">Pendente</p>
+          <p class="item-aluno-info">Curso: Engenharia Civil</p>
+          <p class="item-aluno-info">Turma: 1º semestre</p>
           <p class="item-aluno-carga">Carga horária exigida: 120h</p>
           <a href="" class="item-aluno-link"
             >Visualizar ficha <span aria-hidden="true">›</span></a
           >
         </article>
 
-        <article class="item-aluno" data-situacao="equivalencia">
+        <article
+          class="item-aluno"
+          data-situacao="equivalencia"
+          data-curso="CO"
+          data-turma="5"
+        >
           <h3>Rafael Mendes</h3>
           <p class="item-aluno-status">Equivalência</p>
+          <p class="item-aluno-info">Curso: Controle de Obras</p>
+          <p class="item-aluno-info">Turma: 5º semestre</p>
           <p class="item-aluno-carga">Carga horária exigida: 240h</p>
           <a href="" class="item-aluno-link"
             >Visualizar ficha <span aria-hidden="true">›</span></a
