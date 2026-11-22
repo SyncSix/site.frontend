@@ -22,14 +22,14 @@
           type="button"
           class="btn-voltar"
           aria-label="Voltar"
-          data-voltar="lista-documentos.html"
+          data-voltar="lista-alunos.html"
         ></button>
         SITE - Sistema Integrado de Trabalho e Estágio</span
       >
       <div class="header-info">
         <div class="header-info-text">
           <h2>Detalhes do aluno</h2>
-          <p>Ana Beatriz · RA 99999999</p>
+          <p>Informações detalhadas do aluno</p>
         </div>
         <div class="header-info-icon">
           <img
@@ -41,49 +41,95 @@
     </header>
 
     <main class="ficha">
-      <!-- Curso e turma -->
+      <!-- Identificação -->
       <section class="ficha-card">
-        <h2 class="ficha-curso">Desenvolvimento de Software Multiplataforma</h2>
-        <p class="ficha-turma">2º semestre</p>
+        <div class="ficha-topo">
+          <h2 class="ficha-curso" data-campo="nome">Ana Beatriz</h2>
+          <span class="ficha-status ficha-status--andamento" data-campo="status"
+            >Em andamento</span
+          >
+        </div>
+        <p class="ficha-info">RA <span data-campo="ra">999999999</span></p>
+        <p class="ficha-turma" data-campo="curso-turma">
+          Desenvolvimento de Software Multiplataforma · 2º semestre
+        </p>
       </section>
 
-      <!-- Horas validadas -->
+      <!-- Horas -->
       <section class="ficha-card">
-        <h3 class="ficha-horas">180h validadas</h3>
-        <p class="ficha-restante">60h restantes para 240h</p>
-
-        <div class="ficha-carga">
-          <span>Carga horária reconhecida</span>
-          <strong>180</strong>
-        </div>
+        <h3 class="ficha-horas" data-campo="horas">180h de 240h validadas</h3>
+        <p class="ficha-restante" data-campo="restante">
+          Faltam 60h para concluir
+        </p>
 
         <div
           class="ficha-barra"
           role="progressbar"
+          data-campo="barra-aria"
           aria-valuenow="180"
           aria-valuemin="0"
           aria-valuemax="240"
         >
-          <div class="ficha-barra-preenchimento" style="width: 75%"></div>
+          <div
+            class="ficha-barra-preenchimento"
+            data-campo="barra"
+            style="width: 75%"
+          ></div>
+        </div>
+
+        <div class="ficha-carga">
+          <span>Estágio</span>
+          <strong data-campo="estagio">120h</strong>
+        </div>
+        <div class="ficha-carga">
+          <span>Equivalência</span>
+          <strong data-campo="equivalencia">60h</strong>
+        </div>
+      </section>
+
+      <!-- Pendências do professor -->
+      <section class="ficha-card">
+        <h3 class="ficha-titulo">Aguardando sua avaliação</h3>
+
+        <div class="ficha-item">
+          <div>
+            <p class="ficha-item-nome">Relatório parcial</p>
+            <p class="ficha-item-data">Enviado em 04/10/2026</p>
+          </div>
+          <a href="avaliar-documento.html" class="ficha-acao">Avaliar</a>
         </div>
       </section>
 
       <!-- Documentos enviados -->
-      <a href="" class="ficha-card ficha-link">
-        <h3>Documentos enviados</h3>
-        <p>Termo · Relatório parcial · Relatório final</p>
-      </a>
+      <section class="ficha-card">
+        <h3 class="ficha-titulo">Documentos enviados · 3</h3>
+
+        <div class="ficha-item">
+          <p class="ficha-item-nome">Termo de compromisso</p>
+          <span class="ficha-status ficha-status--aprovado">Aprovado</span>
+        </div>
+        <div class="ficha-item">
+          <p class="ficha-item-nome">Relatório parcial</p>
+          <span class="ficha-status ficha-status--analise">Em análise</span>
+        </div>
+        <div class="ficha-item">
+          <p class="ficha-item-nome">Relatório final</p>
+          <span class="ficha-status ficha-status--correcao"
+            >Correção solicitada</span
+          >
+        </div>
+      </section>
 
       <!-- Equivalências -->
       <a href="" class="ficha-card ficha-link">
-        <h3>Equivalências</h3>
-        <p>Solicitações e horas reconhecidas</p>
+        <h3>Equivalências · 1 solicitação</h3>
+        <p>60h reconhecidas · nenhuma em análise</p>
       </a>
 
       <!-- Histórico -->
       <a href="" class="ficha-card ficha-link">
-        <h3>Histórico</h3>
-        <p>Avaliações e justificativas</p>
+        <h3>Histórico de avaliações</h3>
+        <p>Última: Termo de compromisso aprovado em 02/10/2026</p>
       </a>
     </main>
 
@@ -124,6 +170,6 @@
 
     <script src="../../js/components/menu-navbar.js"></script>
     <script src="../../js/components/btn-voltar.js"></script>
-    <script src="../../js/pages/professor/avaliar-documento.js"></script>
+    <script src="../../js/pages/professor/detalhes-aluno.js"></script>
   </body>
 </html>
