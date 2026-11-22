@@ -1,0 +1,186 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.ficha {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 14px 25px;
+}
+
+/* Card base */
+.ficha-card {
+  display: block;
+  background: #fff;
+  border-radius: 20px;
+  padding: 18px 16px;
+  text-decoration: none;
+}
+
+/* Curso e turma */
+.ficha-curso {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1b2432;
+}
+
+.ficha-turma {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+/* Horas */
+.ficha-horas {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ficha-restante {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ficha-carga {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ficha-carga strong {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #1b2432;
+}
+
+/* Barra de progresso */
+.ficha-barra {
+  height: 8px;
+  background: #e3e7ee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.ficha-barra-preenchimento {
+  height: 100%;
+  background: #1f6f9c;
+  border-radius: 999px;
+}
+
+/* Cards de acesso (documentos, equivalências, histórico) */
+.ficha-link h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ficha-link p {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ficha-link:focus-visible {
+  outline: 2px solid #1f6f9c;
+  outline-offset: 2px;
+}
+
+/* Identificação */
+.ficha-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ficha-topo .ficha-curso {
+  margin: 0;
+  font-size: 18px;
+}
+
+.ficha-info {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: #1b2432;
+}
+
+/* Balões de status */
+.ficha-status {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.ficha-status--andamento { background: #e3eefa; color: #1f6f9c; }
+.ficha-status--aprovado { background: #e4f3ea; color: #2e8b57; }
+.ficha-status--analise { background: #fdf0d5; color: #d98a1c; }
+.ficha-status--correcao { background: #fde8ea; color: #d9534f; }
+
+/* Horas: a barra agora vem antes das linhas de origem */
+.ficha-barra {
+  margin-bottom: 16px;
+}
+
+.ficha-carga:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards com lista */
+.ficha-titulo {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ficha-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e7ee;
+}
+
+.ficha-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.ficha-item-nome {
+  margin: 0;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.ficha-item-data {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ficha-acao {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #1f6f9c;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
