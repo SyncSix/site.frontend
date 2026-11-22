@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
+    <link rel="stylesheet" href="../../styles/components/header.css" />
+    <link rel="stylesheet" href="../../styles/pages/secretaria/acessos.css" />
+
+    <title>Gestão de Estágios</title>
+  </head>
+  <body>
+    <header>
+      <span class="info-SITE"
+        >SITE - Sistema Integrado de Trabalho e Estágio</span
+      >
+      <div class="header-info">
+        <div class="header-info-text">
+          <h2>Liberação de acessos</h2>
+          <p>Verificação de acessos dos usuários</p>
+        </div>
+        <div class="header-info-icon">
+          <img
+            src="../../assets/icons/icon-notificacao-on.svg"
+            alt="Notificações existentes"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="ace">
+      <!-- Resumo -->
+      <section class="ace-resumo">
+        <span class="ace-resumo-valor" id="ace-pendentes">3</span>
+        <div>
+          <h2>Solicitações aguardando decisão</h2>
+          <p>
+            Novos usuários só acessam o sistema depois da liberação da
+            Secretaria.
+          </p>
+        </div>
+      </section>
+
+      <!-- Busca -->
+      <label class="ace-busca">
+        <input
+          type="search"
+          id="ace-busca"
+          placeholder="Buscar por RA ou nome"
+        />
+      </label>
+
+      <!-- Fila -->
+      <section>
+        <h3 class="ace-secao">Aguardando liberação</h3>
+
+        <div class="ace-fila" id="ace-fila">
+          <article class="ace-card">
+            <div class="ace-card-topo">
+              <h4>Beatriz Moraes</h4>
+              <span class="ace-balao ace-balao--aluno">Aluno</span>
+            </div>
+            <p class="ace-ra">
+              RA 888888820 · Desenvolvimento de Software Multiplataforma
+            </p>
+            <p class="ace-data">Cadastro em 20/11/2026</p>
+
+            <ul class="ace-checks">
+              <li class="ace-check ace-check--ok">RA encontrado na base</li>
+              <li class="ace-check ace-check--ok">
+                Matrícula na disciplina de estágio: matriculado
+              </li>
+            </ul>
+
+            <div class="ace-decisao">
+              <button
+                type="button"
+                class="ace-btn ace-btn--liberar"
+                data-decisao="liberar"
+              >
+                Liberar acesso
+              </button>
+              <div class="ace-decisao-sec">
+                <button
+                  type="button"
+                  class="ace-btn ace-btn--correcao"
+                  data-decisao="correcao"
+                >
+                  Solicitar correção
+                </button>
+                <button
+                  type="button"
+                  class="ace-btn ace-btn--bloquear"
+                  data-decisao="bloquear"
+                >
+                  Bloquear
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="ace-card">
+            <div class="ace-card-topo">
+              <h4>João Pedro Silva</h4>
+              <span class="ace-balao ace-balao--aluno">Aluno</span>
+            </div>
+            <p class="ace-ra">RA 888888821 · Engenharia Civil</p>
+            <p class="ace-data">Cadastro em 21/11/2026</p>
+
+            <ul class="ace-checks">
+              <li class="ace-check ace-check--ok">RA encontrado na base</li>
+              <li class="ace-check ace-check--alerta">
+                Matrícula na disciplina de estágio: não localizada
+              </li>
+            </ul>
+
+            <div class="ace-decisao">
+              <button
+                type="button"
+                class="ace-btn ace-btn--liberar"
+                data-decisao="liberar"
+              >
+                Liberar acesso
+              </button>
+              <div class="ace-decisao-sec">
+                <button
+                  type="button"
+                  class="ace-btn ace-btn--correcao"
+                  data-decisao="correcao"
+                >
+                  Solicitar correção
+                </button>
+                <button
+                  type="button"
+                  class="ace-btn ace-btn--bloquear"
+                  data-decisao="bloquear"
+                >
+                  Bloquear
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="ace-card">
+            <div class="ace-card-topo">
+              <h4>Prof. Marcos Teixeira</h4>
+              <span class="ace-balao ace-balao--professor">Professor</span>
+            </div>
+            <p class="ace-ra">
+              E-mail institucional · Ciência de Dados para Negócios
+            </p>
+            <p class="ace-data">Cadastro em 21/11/2026</p>
+
+            <ul class="ace-checks">
+              <li class="ace-check ace-check--ok">
+                E-mail institucional válido
+              </li>
+              <li class="ace-check ace-check--alerta">
+                Vínculo com o curso ainda não confirmado
+              </li>
+            </ul>
+
+            <div class="ace-decisao">
+              <button
+                type="button"
+                class="ace-btn ace-btn--liberar"
+                data-decisao="liberar"
+              >
+                Liberar acesso
+              </button>
+              <div class="ace-decisao-sec">
+                <button
+                  type="button"
+                  class="ace-btn ace-btn--correcao"
+                  data-decisao="correcao"
+                >
+                  Solicitar correção
+                </button>
+                <button
+                  type="button"
+                  class="ace-btn ace-btn--bloquear"
+                  data-decisao="bloquear"
+                >
+                  Bloquear
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="ace-vazio" id="ace-vazio" hidden>
+          Nenhuma solicitação pendente.
+        </p>
+      </section>
+
+      <!-- Decisões recentes -->
+      <section>
+        <h3 class="ace-secao">Decisões recentes</h3>
+
+        <ul class="ace-historico" id="ace-historico">
+          <li class="ace-hist-item">
+            <div class="ace-hist-topo">
+              <strong>Rafaela Gomes</strong>
+              <span class="ace-balao ace-balao--liberar">Liberado</span>
+            </div>
+            <p>Secretaria · 20/11/2026 14:32</p>
+          </li>
+          <li class="ace-hist-item">
+            <div class="ace-hist-topo">
+              <strong>Diego Martins</strong>
+              <span class="ace-balao ace-balao--correcao"
+                >Correção solicitada</span
+              >
+            </div>
+            <p>Secretaria · 19/11/2026 09:10</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Janela de confirmação -->
+      <dialog class="ace-dialog" id="ace-dialog">
+        <form id="ace-form" novalidate>
+          <h3 id="ace-dialog-titulo">Liberar acesso</h3>
+          <p class="ace-dialog-nome" id="ace-dialog-nome"></p>
+
+          <label
+            for="ace-justificativa"
+            class="ace-dialog-rotulo"
+            id="ace-dialog-rotulo"
+            >Justificativa</label
+          >
+          <textarea id="ace-justificativa" rows="4"></textarea>
+          <p class="ace-erro" id="ace-erro" hidden></p>
+
+          <div class="ace-dialog-acoes">
+            <button
+              type="button"
+              class="ace-btn ace-btn--cancelar"
+              id="ace-cancelar"
+            >
+              Cancelar
+            </button>
+            <button type="submit" class="ace-btn ace-btn--confirmar">
+              Registrar decisão
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="home.html" class="bottom-nav__item" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+          />
+        </svg>
+        <span>Início</span>
+      </a>
+
+      <a href="usuarios.html" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="9" cy="8" r="3.5" />
+          <path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6" />
+          <path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2.2.7 3.5 2.6 3.5 5.7" />
+        </svg>
+        <span>Usuários</span>
+      </a>
+
+      <a href="acessos.html" class="bottom-nav__item is-active">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3 5 6v5c0 4.5 3 8.2 7 10 4-1.8 7-5.5 7-10V6z" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+        <span>Acessos</span>
+      </a>
+    </nav>
+
+    <script src="../../js/components/menu-navbar.js"></script>
+    <script src="../../js/pages/secretaria/acessos.js"></script>
+  </body>
+</html>
