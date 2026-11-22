@@ -1,0 +1,361 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.ace {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 14px 25px;
+}
+
+/* Resumo */
+.ace-resumo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.ace-resumo-valor {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #1f6f9c;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ace-resumo h2 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ace-resumo p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #7a8294;
+}
+
+/* Busca */
+.ace-busca input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.ace-busca input:focus {
+  outline: none;
+  border-color: #1f6f9c;
+}
+
+.ace-busca input::placeholder {
+  color: #7a8294;
+}
+
+/* Seções */
+.ace-secao {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ace-fila {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Card da solicitação */
+.ace-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.ace-card[hidden] {
+  display: none;
+}
+
+.ace-card-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ace-card-topo h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ace-ra {
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1b2432;
+}
+
+.ace-data {
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+/* Balões */
+.ace-balao {
+  flex-shrink: 0;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.ace-balao--aluno { background: #e3eefa; color: #1f6f9c; }
+.ace-balao--professor { background: #e4f3ea; color: #2e8b57; }
+.ace-balao--liberar { background: #e4f3ea; color: #2e8b57; }
+.ace-balao--correcao { background: #fdf0d5; color: #d98a1c; }
+.ace-balao--bloquear { background: #fde8ea; color: #d9534f; }
+
+/* Conferência de dados */
+.ace-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 12px;
+  list-style: none;
+  background: #f5f6fa;
+  border-radius: 12px;
+}
+
+.ace-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1b2432;
+}
+
+.ace-check::before {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ace-check--ok::before {
+  content: "✓";
+  background: #2e8b57;
+}
+
+.ace-check--alerta::before {
+  content: "!";
+  background: #d98a1c;
+}
+
+/* Botões de decisão */
+.ace-decisao {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ace-decisao-sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ace-btn {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 11px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ace-btn--liberar {
+  background: #1f6f9c;
+  color: #fff;
+}
+
+.ace-btn--correcao {
+  background: #fdf3de;
+  border-color: #f6e5bf;
+  color: #d98a1c;
+}
+
+.ace-btn--bloquear {
+  background: #fde8ea;
+  border-color: #f7ccd0;
+  color: #d9534f;
+}
+
+.ace-btn:focus-visible {
+  outline: 2px solid #1f6f9c;
+  outline-offset: 2px;
+}
+
+.ace-vazio {
+  margin: 0;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #7a8294;
+}
+
+.ace-vazio[hidden] {
+  display: none;
+}
+
+/* Histórico */
+.ace-historico {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ace-hist-item {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.ace-hist-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.ace-hist-topo strong {
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.ace-hist-item p {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+/* Janela de confirmação */
+.ace-dialog {
+  width: calc(100% - 50px);
+  max-width: 360px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 16px;
+}
+
+.ace-dialog::backdrop {
+  background: rgba(27, 36, 50, 0.5);
+}
+
+.ace-dialog h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ace-dialog-nome {
+  margin: 0 0 16px;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ace-dialog-rotulo {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1b2432;
+}
+
+.ace-dialog textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  padding: 12px 14px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.ace-dialog textarea:focus {
+  outline: none;
+  border-color: #1f6f9c;
+}
+
+.ace-dialog textarea.ace-campo-erro {
+  border-color: #d9534f;
+}
+
+.ace-erro {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #d9534f;
+}
+
+.ace-erro[hidden] {
+  display: none;
+}
+
+.ace-dialog-acoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.ace-btn--cancelar {
+  background: #fff;
+  border-color: #e3e7ee;
+  color: #1b2432;
+}
+
+.ace-btn--confirmar {
+  background: #1f6f9c;
+  color: #fff;
+}
