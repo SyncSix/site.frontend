@@ -1,0 +1,198 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 14px 25px;
+}
+
+/* Dados do aluno */
+.card-aluno {
+  display: flex;
+  background: #fff;
+  border: 1px solid #1f6f9c;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-aluno-foto {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  background-color: #0f4a6e;
+  background-image: url("../../assets/images/padrao-aluno.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-aluno-foto img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 4px #1f6f9c;
+}
+
+.card-aluno-dados {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 14px;
+}
+
+.card-aluno-dados h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b2432;
+}
+
+.card-aluno-dados p {
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5a6275;
+}
+
+.card-aluno-dados p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards de informação */
+.card-info,
+.card-horas {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px 14px;
+}
+
+.card-info h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b2432;
+}
+
+.card-info p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #7a8294;
+}
+
+.card-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Horas registradas */
+.card-horas h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b2432;
+}
+
+.card-horas-total {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f6f9c;
+}
+
+.card-horas h4 {
+  margin: 16px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b2432;
+}
+
+.barra {
+  height: 6px;
+  background: #e3e7ee;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 7px;
+}
+
+.barra-preenchimento {
+  height: 100%;
+  background: #1f6f9c;
+  border-radius: 999px;
+}
+
+.lancamentos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lancamento {
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.lancamento--validado {
+  background: #e4f3ea;
+  border: 1px solid #cfe8da;
+}
+
+.lancamento--info {
+  background: #e8f0f8;
+  border: 1px solid #d6e3f1;
+}
+
+.lancamento--analise {
+  background: #fdf3de;
+  border: 1px solid #f6e5bf;
+}
+
+.lancamento h5 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b2432;
+}
+
+.lancamento p {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7a8294;
+}
+
+.lancamento-status {
+  font-size: 12px;
+}
+
+.lancamento-status--validado {
+  color: #1f6f9c;
+}
+
+.lancamento-status--analise {
+  color: #1f6f9c;
+}
+
+.btn-progresso {
+  display: block;
+  margin-top: 12px;
+  background: #e3eefa;
+  border: 1px solid #cfe0f3;
+  border-radius: 999px;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}

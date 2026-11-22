@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/components/form.css" />
+    <link rel="stylesheet" href="../../styles/components/btn-voltar.css" />
+    <link rel="stylesheet" href="../../styles/pages/auth/cadastro.css" />
+
+    <title>Gestão de Estágio</title>
+  </head>
+  <body>
+    <button
+      type="button"
+      class="btn-voltar"
+      aria-label="Voltar"
+      data-voltar="login.html"
+    ></button>
+    <main>
+      <img
+        src="../../assets/images/icon-logoSITE.svg"
+        alt="Logo FATEC Votorantim"
+        id="logo-fatec"
+      />
+      <h1>Cadastro</h1>
+      <p class="subtitulo">Preencha os dados para solicitar seu acesso</p>
+
+      <nav class="menu-perfil" role="tablist" aria-label="Perfil">
+        <button
+          type="button"
+          role="tab"
+          class="ativo"
+          data-alvo="form-aluno"
+          aria-selected="true"
+        >
+          Aluno
+        </button>
+        <button
+          type="button"
+          role="tab"
+          data-alvo="form-professor"
+          aria-selected="false"
+        >
+          Professor
+        </button>
+        <button
+          type="button"
+          role="tab"
+          data-alvo="form-secretaria"
+          aria-selected="false"
+        >
+          Secretaria
+        </button>
+      </nav>
+
+      <div class="formularios">
+        <!-- Formulário Cadastro Aluno -->
+        <form id="form-aluno" class="form-perfil" role="tabpanel">
+          <label
+            >Nome completo <input type="text" name="nome" required
+          /></label>
+          <label>RA <input type="text" name="ra" required /></label>
+          <label
+            >Curso
+            <select name="curso">
+              <option>Desenvolvimento de Software Multiplataforma</option>
+              <option>Ciência de Dados para Negócios</option>
+              <option>Controle de Obras</option>
+              <option>Engenharia Civil</option>
+            </select>
+          </label>
+          <label>Email acadêmico <input type="email" name="email" required /></label>
+          <label>Confirmar email<input type="email" name="confirm-email" required /></label>
+          <div class="form-password">
+            <label for="aluno-password">Senha</label>
+            <input type="password" id="aluno-password" name="password" autocomplete="new-password" required />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Mostrar senha"
+              aria-pressed="false"
+              aria-controls="aluno-password"
+            ></button>
+          </div>
+          <div class="form-password">
+            <label for="aluno-confirm-password">Confirmar senha</label>
+            <input type="password" id="aluno-confirm-password" name="confirm-password" autocomplete="new-password" required />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Mostrar senha"
+              aria-pressed="false"
+              aria-controls="aluno-confirm-password"
+            ></button>
+          </div>
+          <button type="submit">Cadastrar</button>
+        </form>
+
+        <!-- Formulário Cadastro Professor -->
+        <form id="form-professor" class="form-perfil" role="tabpanel" hidden>
+          <label
+            >Nome completo <input type="text" name="nome" required
+          /></label>
+          <label
+            >Matrícula <input type="text" name="matricula" required
+          /></label>
+          <label
+            >Email institucional <input type="email" name="email" required
+          /></label>
+          <label>Confirmar email <input type="email" name="confirm-email" required /></label>
+          <div class="form-password">
+            <label for="professor-password">Senha</label>
+            <input type="password" id="professor-password" name="password" autocomplete="new-password" required />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Mostrar senha"
+              aria-pressed="false"
+              aria-controls="professor-password"
+            ></button>
+          </div>
+          <div class="form-password">
+            <label for="professor-confirm-password">Confirmar senha</label>
+            <input type="password" id="professor-confirm-password" name="confirm-password" autocomplete="new-password" required />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Mostrar senha"
+              aria-pressed="false"
+              aria-controls="professor-confirm-password"
+            ></button>
+          </div>
+          <button type="submit">Cadastrar</button>
+        </form>
+
+        <!-- Formulário Cadastro Secretaria -->
+        <form id="form-secretaria" class="form-perfil" role="tabpanel" hidden>
+          <label
+            >Nome completo <input type="text" name="nome" required
+          /></label>
+          <label
+            >Matrícula <input type="text" name="matricula" required
+          /></label>
+          <label
+            >Email institucional <input type="email" name="email" required
+          /></label>
+          <label>Confirmar email <input type="email" name="confirm-email" required /></label>
+          <div class="form-password">
+            <label for="secretaria-password">Senha</label>
+            <input type="password" id="secretaria-password" name="password" autocomplete="new-password" required />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Mostrar senha"
+              aria-pressed="false"
+              aria-controls="secretaria-password"
+            ></button>
+          </div>
+          <div class="form-password">
+            <label for="secretaria-confirm-password">Confirmar senha</label>
+            <input type="password" id="secretaria-confirm-password" name="confirm-password" autocomplete="new-password" required />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Mostrar senha"
+              aria-pressed="false"
+              aria-controls="secretaria-confirm-password"
+            ></button>
+          </div>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+      <div class="separador">
+        <span class="linha"></span>
+        <span>ou</span>
+        <span class="linha"></span>
+      </div>
+      <a href="./login.html" class="btn-login">Fazer Login</a>
+    </main>
+    <script src="../../js/pages/cadastro.js"></script>
+    <script src="../../js/components/btn-voltar.js"></script>
+  </body>
+</html>

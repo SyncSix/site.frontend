@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
+    <link rel="stylesheet" href="../../styles/components/card-estagio.css" />
+    <link rel="stylesheet" href="../../styles/components/header.css" />
+    <link rel="stylesheet" href="../../styles/pages/aluno/home.css" />
+
+    <title>Gestão de Estágios</title>
+  </head>
+  <body>
+    <header>
+      <span class="info-SITE"
+        >SITE - Sistema Integrado de Trabalho e Estágio</span
+      >
+      <div class="header-info">
+        <div class="header-info-text">
+          <h2>Olá, aluno!</h2>
+          <p>Acompanhe suas horas e pendências</p>
+        </div>
+        <div class="header-info-icon">
+          <img
+            src="../../assets/icons/icon-notificacao-on.svg"
+            alt="Notificações existentes"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="infos">
+      <section
+        class="progress-card"
+        aria-labelledby="progress-title"
+        data-total="240"
+        data-done="120"
+      >
+        <h2 id="progress-title" class="progress-card__title">Seu progresso</h2>
+        <p class="progress-card__subtitle">
+          Um passo mais perto da sua formação.
+        </p>
+
+        <p class="progress-card__hours">
+          <span data-done-text>120</span> /
+          <span data-total-text>240</span> horas
+        </p>
+
+        <div
+          class="progress-card__bar"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="50"
+          aria-label="Progresso da formação"
+        >
+          <div class="progress-card__fill"></div>
+        </div>
+
+        <div class="progress-card__stats">
+          <div>
+            <strong><span data-percent>50</span>% concluído</strong>
+            <small><span data-done-text>120</span> horas validadas</small>
+          </div>
+          <div>
+            <strong><span data-remaining>120</span>h restantes</strong>
+            <small>Até a conclusão</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="notificacoes">
+        <div class="card-notificacoes">
+          <img src="../../assets/icons/icon-alert.svg" alt="Icon Alerta" />
+          <span class="notificacoes-num">1</span>
+          <p class="notificacoes-text">Documentos pendentes</p>
+        </div>
+        <div class="card-notificacoes">
+          <img src="../../assets/icons/icon-clock.svg" alt="Icon Relógio" />
+          <span class="notificacoes-num">2</span>
+          <p class="notificacoes-text">Pedidos em análise</p>
+        </div>
+      </section>
+
+      <section class="proxima-acao">
+        <h3>Próxima ação</h3>
+        <div class="card-proxima-acao">
+          <div class="titulo-card-prox-acao">
+            <img src="../../assets/icons/icon-alert.svg" alt="Icon Alerta" />
+            <p>Documento requer atenção</p>
+          </div>
+          <p class="text-card-proxima-acao">
+            Confira o documento pendente e envie a correção, se necessária.
+          </p>
+          <a href="" class="btn-card-proxima-acao">Ver documentos</a>
+        </div>
+      </section>
+
+      <section class="acoes-rapidas">
+        <h3>Ações rápidas</h3>
+        <div class="cards-acoes-rapidas">
+          <a href="nova-atividade.html" class="card">
+            <img src="../../assets/icons/icon-plus.svg" alt="Icon Plus" />
+            <p>Nova atividade</p>
+          </a>
+          <a href="perfil.html" class="card">
+            <img src="../../assets/icons/icon-chart.svg" alt="Icon Chart" />
+            <p>Meu progresso</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="estagio-atual">
+        <h3>Estágio atual</h3>
+
+        <div class="card-estagio">
+          <div class="estagio-header">
+            <img
+              src="../../assets/icons/icon-atividades-select.svg"
+              alt="Icon Maleta"
+            />
+            <h4>Tech Solutions Ltda.</h4>
+          </div>
+
+          <p class="estagio-cargo">
+            Desenvolvedor de Software · 30 horas semanais
+          </p>
+
+          <p class="estagio-horas">120h validadas de 240h</p>
+
+          <div
+            class="estagio-barra"
+            role="progressbar"
+            aria-valuenow="120"
+            aria-valuemin="0"
+            aria-valuemax="240"
+          >
+            <div class="estagio-barra-preenchimento" style="width: 50%"></div>
+          </div>
+
+          <p class="estagio-info">Termo de compromisso aprovado · 02/10/2026</p>
+          <p class="estagio-info">
+            Relatório parcial: 24 horas adicionadas · 30/09/2026
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="home.html" class="bottom-nav__item is-active" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+          />
+        </svg>
+        <span>Início</span>
+      </a>
+
+      <a href="estagios.html" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2" />
+          <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
+        </svg>
+        <span>Estágios</span>
+      </a>
+
+      <a href="perfil.html" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+        </svg>
+        <span>Perfil</span>
+      </a>
+    </nav>
+
+    <script src="../../js/pages/aluno/home.js"></script>
+    <script src="../../js/components/menu-navbar.js"></script>
+  </body>
+</html>
