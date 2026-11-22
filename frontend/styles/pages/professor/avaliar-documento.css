@@ -1,0 +1,175 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.avaliar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 14px 25px;
+}
+
+.avaliar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Base */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.card-titulo {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.card-descricao {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7a8294;
+}
+
+.rotulo {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #1f6f9c;
+}
+
+.titulo-secao {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+/* Dados do documento */
+.documento-aluno {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.documento-info {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #1b2432;
+}
+
+.documento-envio {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.documento-link {
+  color: #1f6f9c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Campos */
+.campo {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.campo:focus {
+  outline: none;
+  border-color: #1f6f9c;
+}
+
+.campo--texto {
+  resize: vertical;
+}
+
+.campo--erro {
+  border-color: #d9534f;
+}
+
+.erro {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #d9534f;
+}
+
+.erro[hidden] {
+  display: none;
+}
+
+/* Opções de decisão */
+.decisao-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.opcao {
+  display: block;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1b2432;
+  cursor: pointer;
+}
+
+.opcao input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opcao--aprovar { background: #e4f3ea; }
+.opcao--correcao { background: #fdf3de; }
+.opcao--reprovar { background: #fde8ea; }
+
+.opcao:has(input:checked) {
+  border-color: #1f6f9c;
+}
+
+.opcao:has(input:focus-visible) {
+  outline: 2px solid #1f6f9c;
+  outline-offset: 2px;
+}
+
+/* Botão */
+.btn-primario {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  background: #1f6f9c;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primario:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

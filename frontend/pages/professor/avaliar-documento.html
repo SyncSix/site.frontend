@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
+    <link rel="stylesheet" href="../../styles/components/header.css" />
+    <link rel="stylesheet" href="../../styles/components/btn-voltar.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/pages/professor/avaliar-documento.css"
+    />
+
+    <title>Gestão de Estágios</title>
+  </head>
+  <body>
+    <header>
+      <span class="info-SITE">
+        <button
+          type="button"
+          class="btn-voltar"
+          aria-label="Voltar"
+          data-voltar="lista-documentos.html"
+        ></button>
+        SITE - Sistema Integrado de Trabalho e Estágio</span
+      >
+      <div class="header-info">
+        <div class="header-info-text">
+          <h2>Olá, professor(a)!</h2>
+          <p>Avaliações, alunos e prazos acadêmicos</p>
+        </div>
+        <div class="header-info-icon">
+          <img
+            src="../../assets/icons/icon-notificacao-on.svg"
+            alt="Notificações existentes"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="avaliar">
+      <!-- Dados do documento -->
+      <section class="card documento">
+        <p class="rotulo">Relatório parcial</p>
+        <h2 class="documento-aluno">Ana Beatriz</h2>
+        <p class="documento-info">Ana Beatriz · RA 999999999 · 3º DSM</p>
+        <p class="documento-envio">
+          Enviado em 04/10/2026 ·
+          <a href="" class="documento-link">Visualizar PDF</a>
+        </p>
+      </section>
+
+      <form id="form-avaliacao" class="avaliar-form" novalidate>
+        <!-- Horas -->
+        <section class="card">
+          <label for="horas" class="card-titulo"
+            >Quantidade de horas a validar</label
+          >
+          <p class="card-descricao">Confira a documentação antes de decidir.</p>
+          <input
+            type="number"
+            id="horas"
+            class="campo"
+            min="0"
+            placeholder="Ex.: 24"
+          />
+        </section>
+
+        <!-- Decisão -->
+        <section class="decisao">
+          <h3 class="titulo-secao">Decisão acadêmica</h3>
+
+          <div class="decisao-opcoes">
+            <label class="opcao opcao--aprovar">
+              <input type="radio" name="decisao" value="aprovar" />
+              <span>Aprovar documento</span>
+            </label>
+
+            <label class="opcao opcao--correcao">
+              <input type="radio" name="decisao" value="correcao" />
+              <span>Solicitar correção</span>
+            </label>
+
+            <label class="opcao opcao--reprovar">
+              <input type="radio" name="decisao" value="reprovar" />
+              <span>Reprovar documento</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Justificativa -->
+        <section class="card">
+          <label for="justificativa" class="card-titulo"
+            >Obrigatória para correção ou recusa</label
+          >
+          <p class="card-descricao">
+            Descreva as alterações necessárias para o aluno.
+          </p>
+          <textarea
+            id="justificativa"
+            class="campo campo--texto"
+            rows="4"
+          ></textarea>
+          <p class="erro" id="erro-form" hidden></p>
+        </section>
+
+        <button type="submit" class="btn-primario">Confirmar decisão</button>
+      </form>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="home.html" class="bottom-nav__item" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+          />
+        </svg>
+        <span>Início</span>
+      </a>
+
+      <a href="lista-alunos.html" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="9" cy="8" r="3.5" />
+          <path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6" />
+          <path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2.2.7 3.5 2.6 3.5 5.7" />
+        </svg>
+        <span>Alunos</span>
+      </a>
+
+      <a href="lista-documentos.html" class="bottom-nav__item is-active">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="5" y="4" width="14" height="17" rx="2" />
+          <path d="M9 4h6v2H9zM9 13l2 2 4-4" />
+        </svg>
+        <span>Avaliações</span>
+      </a>
+
+      <a href="relatorio.html" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 20h16M7 20v-8M12 20V6M17 20v-5" />
+        </svg>
+        <span>Relatórios</span>
+      </a>
+    </nav>
+
+    <script src="../../js/components/menu-navbar.js"></script>
+    <script src="../../js/components/btn-voltar.js"></script>
+    <script src="../../js/pages/professor/avaliar-documento.js"></script>
+  </body>
+</html>
