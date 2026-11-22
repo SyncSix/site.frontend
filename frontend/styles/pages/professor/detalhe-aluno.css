@@ -1,0 +1,99 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.ficha {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 14px 25px;
+}
+
+/* Card base */
+.ficha-card {
+  display: block;
+  background: #fff;
+  border-radius: 20px;
+  padding: 18px 16px;
+  text-decoration: none;
+}
+
+/* Curso e turma */
+.ficha-curso {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1b2432;
+}
+
+.ficha-turma {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+/* Horas */
+.ficha-horas {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ficha-restante {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ficha-carga {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ficha-carga strong {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #1b2432;
+}
+
+/* Barra de progresso */
+.ficha-barra {
+  height: 8px;
+  background: #e3e7ee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.ficha-barra-preenchimento {
+  height: 100%;
+  background: #1f6f9c;
+  border-radius: 999px;
+}
+
+/* Cards de acesso (documentos, equivalências, histórico) */
+.ficha-link h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.ficha-link p {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.ficha-link:focus-visible {
+  outline: 2px solid #1f6f9c;
+  outline-offset: 2px;
+}
