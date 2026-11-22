@@ -1,13 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: #f4f6fa;
-  min-height: 100vh;
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
 }
 
 /* Parte principal da tela */

@@ -18,6 +18,14 @@
   --btn-primary: #176B9A;
   --btn-secondary: #EAF4FB;
 
+  --nav-bg: #ffffff;
+  --nav-text: #748798;
+  --nav-active: #126C9F;
+  --nav-active-bg: #EAF4FB;
+  --card-bg: #17476f;
+  --card-track: #e3ebf3;
+  --card-fill: #f47c3c;
+
   --font-primary: "Poppins", sans-serif;
 }
 
