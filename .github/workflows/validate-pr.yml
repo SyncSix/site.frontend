@@ -1,0 +1,22 @@
+
+name: Validate Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-source-branch:
+    name: Validate Source Branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check source branch
+        run: |
+          if [ "${{ github.head_ref }}" != "developer" ]; then
+            echo "Pull Requests para main só são permitidos a partir da branch developer."
+            exit 1
+          fi
+
+          echo "Branch de origem permitida!"
