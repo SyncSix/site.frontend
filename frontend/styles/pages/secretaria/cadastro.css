@@ -1,0 +1,187 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.cad {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 14px 25px;
+}
+
+.cad-topo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Busca */
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.busca img {
+  width: 16px;
+  height: 16px;
+}
+
+.busca input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.busca input::placeholder {
+  color: #7a8294;
+}
+
+/* Filtros em chips */
+.filtros {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filtros::-webkit-scrollbar {
+  display: none;
+}
+
+.filtro {
+  flex-shrink: 0;
+  border: 1px solid #e3e7ee;
+  background: #fff;
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-family: inherit;
+  font-size: 12px;
+  color: #1b2432;
+  cursor: pointer;
+}
+
+.filtro--ativo {
+  background: #1f6f9c;
+  border-color: #1f6f9c;
+  color: #fff;
+}
+
+/* Lista vazia e cards escondidos pelo filtro */
+.cad-card[hidden] {
+  display: none;
+}
+
+.sem-resultados {
+  margin: 0;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #7a8294;
+}
+
+.sem-resultados[hidden] {
+  display: none;
+}
+
+/* Lista */
+.cad-secao {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.cad-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cad-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.cad-card-topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cad-card-topo img {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.cad-card-topo h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.cad-card-situacao {
+  margin: 0 0 12px 34px;
+  font-size: 12px;
+  color: #7a8294;
+}
+
+.cad-card-link {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  color: #7a8294;
+  text-decoration: none;
+}
+
+.cad-card-link:hover {
+  text-decoration: underline;
+}
+
+/* Ações */
+.cad-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cad-acao {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f6f9c;
+  cursor: pointer;
+}
+
+.cad-acao + .cad-acao::before {
+  content: "·";
+  margin: 0 8px;
+  color: #7a8294;
+  font-weight: 400;
+}
+
+.cad-filtro:focus-visible,
+.cad-acao:focus-visible,
+.cad-card-link:focus-visible {
+  outline: 2px solid #1f6f9c;
+  outline-offset: 2px;
+}
