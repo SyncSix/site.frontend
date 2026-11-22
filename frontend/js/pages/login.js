@@ -1,10 +1,23 @@
 // ===== Mock Usuários =====
 const USUARIOS = [
+  // Telas principais
   {
     login: "aluno@fatec.sp.gov.br",
     senha: "Aluno@123",
-    destino: "./cadastro.html",
+    destino: "../aluno/home.html", // ajuste para a home do aluno
   },
+  {
+    login: "professor@fatec.sp.gov.br",
+    senha: "Professor@123",
+    destino: "../professor/home.html", // ajuste para a home do professor
+  },
+  {
+    login: "secretaria@fatec.sp.gov.br",
+    senha: "Secretaria@123",
+    destino: "../secretaria/home.html", // ajuste para a home da secretaria
+  },
+
+  // Fluxos especiais
   {
     login: "analise@fatec.sp.gov.br",
     senha: "Analise@123",
@@ -31,7 +44,7 @@ toggleButton.addEventListener("click", () => {
   toggleButton.setAttribute("aria-pressed", String(isHidden));
   toggleButton.setAttribute(
     "aria-label",
-    isHidden ? "Ocultar senha" : "Mostrar senha"
+    isHidden ? "Ocultar senha" : "Mostrar senha",
   );
 });
 
@@ -82,7 +95,7 @@ form.addEventListener("submit", (e) => {
   }
 
   const usuario = USUARIOS.find(
-    (u) => u.login.toLowerCase() === login && u.senha === senha
+    (u) => u.login.toLowerCase() === login && u.senha === senha,
   );
 
   if (!usuario) {

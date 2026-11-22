@@ -154,35 +154,66 @@ form {
 .popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(27, 36, 50, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 25px;
+  box-sizing: border-box;
   z-index: 1000;
 }
 
 .popup {
   background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  width: min(90%, 360px);
+  padding: 24px 20px 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(27, 36, 50, 0.2);
+}
+
+/* Ícone de alerta feito só com CSS */
+.popup::before {
+  content: "!";
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #fde8ea;
+  font-size: 20px;
+  font-weight: 700;
+  color: #d9534f;
 }
 
 .popup-msg {
-  margin: 0 0 16px;
-  color: #b91c1c;
+  margin: 0 0 20px;
+  font-size: 14px;
   font-weight: 600;
+  line-height: 1.5;
+  color: #1b2432;
 }
 
 .popup-btn {
-  padding: 8px 20px;
+  display: block;
+  width: 100%;
+  padding: 12px;
   border: none;
-  border-radius: 8px;
-  background: #111827;
+  border-radius: 999px;
+  background: #1f6f9c;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
   color: #fff;
   cursor: pointer;
+}
+
+.popup-btn:focus-visible {
+  outline: 2px solid #1f6f9c;
+  outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
