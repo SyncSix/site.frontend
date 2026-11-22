@@ -1,109 +1,21 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de Estágio - Tipo</title>
-    <link rel="stylesheet" href="../styles/global.css" />
-    <!-- reaproveita o estilo da tela Nova atividade (menu, topo, cartões, aviso) -->
-    <link rel="stylesheet" href="../styles/pages/tela-nova-atividade.css" />
-    <!-- ajustes só desta tela -->
-    <link rel="stylesheet" href="../styles/pages/tela-cadastro-estagio.css" />
+    <title>Tipo de Estágio</title>
+    <link rel="stylesheet" href="../styles/pages/novo-estagio.css" />
   </head>
-
   <body>
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-      <symbol id="i-voltar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M13 8l-4 4 4 4"/></symbol>
-      <symbol id="i-sino" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
-      <symbol id="i-inicio" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
-      <symbol id="i-atividades" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></symbol>
-      <symbol id="i-documentos" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></symbol>
-      <symbol id="i-perfil" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
-    </svg>
+    <main>
+      <button class="opcao" type="button">Não obrigatório remunerado.</button>
+      <button class="opcao" type="button">Obrigatório remunerado.</button>
+      <button class="opcao" type="button">Obrigatório não remunerado.</button>
 
-    <div class="app">
-      <!-- Menu: embaixo no celular, na lateral no desktop -->
-      <nav class="menu" aria-label="Menu principal">
-        <div class="menu-marca">Fatec | Votorantim</div>
-        <div class="menu-titulo">GESTÃO DE ESTÁGIOS</div>
-        <ul class="menu-lista">
-          <li>
-            <a class="menu-item" href="#">
-              <svg class="icone" aria-hidden="true"><use href="#i-inicio"/></svg>
-              <span>Início</span>
-            </a>
-          </li>
-          <li>
-            <a class="menu-item" href="#" aria-current="page">
-              <svg class="icone" aria-hidden="true"><use href="#i-atividades"/></svg>
-              <span>Atividades</span>
-            </a>
-          </li>
-          <li>
-            <a class="menu-item" href="#">
-              <svg class="icone" aria-hidden="true"><use href="#i-documentos"/></svg>
-              <span>Documentos</span>
-            </a>
-          </li>
-          <li>
-            <a class="menu-item" href="#">
-              <svg class="icone" aria-hidden="true"><use href="#i-perfil"/></svg>
-              <span>Perfil</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <p class="aviso">Plano de Atividades acompanha o termo</p>
 
-      <div class="pagina">
-        <header class="topo">
-          <button class="voltar" id="btn-voltar" type="button">
-            <svg class="icone" aria-hidden="true"><use href="#i-voltar"/></svg>
-            <span>SITE - Sistema Integrado de Trabalho e Estágio</span>
-          </button>
-
-          <div class="titulo-linha">
-            <h1>Cadastro de Estágio</h1>
-            <button class="sino" type="button" aria-label="Notificações (há novas)">
-              <svg class="icone" aria-hidden="true"><use href="#i-sino"/></svg>
-            </button>
-          </div>
-
-          <p class="subtitulo">Etapa 1 de 5 · Tipo</p>
-        </header>
-
-        <main class="lista lista-tipos">
-          <div class="grupo-tipos" role="radiogroup" aria-label="Tipo de estágio">
-            <button class="cartao" type="button" role="radio" aria-checked="false"
-              data-tipo="nao-obrigatorio-remunerado" data-anexo="A"
-              data-nome="Não obrigatório remunerado">
-              <span class="cartao-titulo">Não obrigatório remunerado · Anexo A</span>
-            </button>
-
-            <button class="cartao" type="button" role="radio" aria-checked="false"
-              data-tipo="obrigatorio-remunerado" data-anexo="B"
-              data-nome="Obrigatório remunerado">
-              <span class="cartao-titulo">Obrigatório remunerado · Anexo B</span>
-            </button>
-
-            <button class="cartao" type="button" role="radio" aria-checked="false"
-              data-tipo="obrigatorio-nao-remunerado" data-anexo="C"
-              data-nome="Obrigatório não remunerado">
-              <span class="cartao-titulo">Obrigatório não remunerado · Anexo C</span>
-            </button>
-          </div>
-
-          <p class="info">Plano de Atividades acompanha o termo</p>
-
-          <button class="botao-continuar" id="btn-continuar" type="button" disabled>
-            Continuar
-          </button>
-        </main>
-      </div>
-    </div>
-
-    <!-- Mensagem rápida que aparece embaixo -->
-    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
-
-    <script src="../js/pages/tela-cadastro-estagio.js"></script>
+      <button class="botao" type="button">Continuar</button>
+    </main>
+    <script src="../js/pages/novo-estagio.js"></script>
   </body>
 </html>
