@@ -45,6 +45,22 @@ body {
   color: #7a8294;
 }
 
+.card-atividade[hidden] {
+  display: none;
+}
+
+.sem-resultados {
+  margin: 0;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #7a8294;
+}
+
+.sem-resultados[hidden] {
+  display: none;
+}
+
 /* Filtros */
 .filtros {
   display: flex;

@@ -52,15 +52,47 @@
       <!-- Busca -->
       <label class="busca">
         <img src="../../assets/icons/icon-filter.svg" alt="" />
-        <input type="search" placeholder="Buscar atividade ou empresa" />
+        <input
+          type="search"
+          id="busca-atividade"
+          placeholder="Buscar atividade ou empresa"
+        />
       </label>
 
       <!-- Filtros -->
       <div class="filtros">
-        <button class="filtro filtro--ativo" type="button">Todas</button>
-        <button class="filtro" type="button">Em andamento</button>
-        <button class="filtro" type="button">Em análise</button>
-        <button class="filtro" type="button">Concluídas</button>
+        <button
+          class="filtro filtro--ativo"
+          type="button"
+          aria-pressed="true"
+          data-filtro="todas"
+        >
+          Todas
+        </button>
+        <button
+          class="filtro"
+          type="button"
+          aria-pressed="false"
+          data-filtro="andamento"
+        >
+          Em andamento
+        </button>
+        <button
+          class="filtro"
+          type="button"
+          aria-pressed="false"
+          data-filtro="analise"
+        >
+          Em análise
+        </button>
+        <button
+          class="filtro"
+          type="button"
+          aria-pressed="false"
+          data-filtro="concluida"
+        >
+          Concluídas
+        </button>
       </div>
 
       <p class="modalidades">
@@ -70,7 +102,7 @@
 
       <!-- Lista de atividades -->
       <section class="lista-atividades">
-        <article class="card-atividade">
+        <article class="card-atividade" data-status="andamento">
           <div class="card-atividade-topo">
             <div class="card-atividade-tipo">
               <img src="../../assets/icons/icon-atividades-select.svg" alt="" />
@@ -101,7 +133,7 @@
           </a>
         </article>
 
-        <article class="card-atividade">
+        <article class="card-atividade" data-status="analise"> 
           <div class="card-atividade-topo">
             <div class="card-atividade-tipo">
               <img src="../../assets/icons/icon-chart.svg" alt="" />
@@ -120,7 +152,7 @@
           </a>
         </article>
 
-        <article class="card-atividade">
+        <article class="card-atividade" data-status="correcao">
           <div class="card-atividade-topo">
             <div class="card-atividade-tipo">
               <img src="../../assets/icons/icon-documentos-select.svg" alt="" />
@@ -140,8 +172,12 @@
         </article>
       </section>
 
+      <p class="sem-resultados" hidden>Nenhuma atividade encontrada.</p>
+
       <!-- Botão fixo -->
-      <a href="nova-atividade.html" class="btn-nova-atividade">+ Nova atividade</a>
+      <a href="nova-atividade.html" class="btn-nova-atividade"
+        >+ Nova atividade</a
+      >
     </main>
 
     <nav class="bottom-nav" aria-label="Navegação principal">
