@@ -1,0 +1,92 @@
+@import url(../../global.css);
+
+body {
+    background-color: var(--bg);
+     padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f4f6fa;
+  min-height: 100vh;
+}
+
+/* Parte principal da tela */
+main {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Cada campo fica dentro de um card */
+.campo {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e3e8f0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: text;
+  transition: border-color 0.2s;
+}
+
+.campo:focus-within {
+  border-color: #146c9c;
+}
+
+/* Nome do campo */
+.campo span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1c2b3a;
+  margin-bottom: 4px;
+}
+
+/* Caixa de digitação */
+.campo input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  color: #1c2b3a;
+}
+
+.campo input::placeholder {
+  color: #8a97a8;
+}
+
+/* Botão Continuar */
+.botao {
+  width: 100%;
+  background: #146c9c;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px;
+  margin-top: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botao:hover {
+  background: #0f5a82;
+}
+
+.botao:focus-visible {
+  outline: 3px solid #146c9c;
+  outline-offset: 2px;
+}
