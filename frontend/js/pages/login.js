@@ -21,12 +21,12 @@ const USUARIOS = [
   {
     login: "analise@fatec.sp.gov.br",
     senha: "Analise@123",
-    destino: "../acesso-analise.html",
+    destino: "em-analise.html",
   },
   {
     login: "bloqueado@fatec.sp.gov.br",
     senha: "Bloqueado@123",
-    destino: "../acesso-bloqueado.html",
+    destino: "acesso-negado.html",
   },
 ];
 

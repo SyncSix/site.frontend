@@ -227,28 +227,3 @@ form {
     transform: translateY(0);
   }
 }
-
-.btn-voltar {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  border: none;
-  background-color: var(--primary); /* cor do ícone */
-  -webkit-mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center /
-    contain;
-  mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center / contain;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.btn-voltar:hover {
-  background-color: #6b7280;
-}
-
-.btn-voltar:focus-visible {
-  outline: 2px solid #111827;
-  outline-offset: 4px;
-}
