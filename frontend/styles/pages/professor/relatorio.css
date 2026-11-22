@@ -91,66 +91,163 @@ body {
   margin: 14px 25px;
 }
 
-/* Resumo */
-.resumo-relatorio h3 {
-  margin: 0 0 20px;
+.card-titulo {
+  margin: 0 0 16px;
   font-size: 14px;
   font-weight: 700;
   color: #1b2432;
 }
 
-.resumo-relatorio-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.card-descricao {
+  margin: 0 0 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7a8294;
 }
 
-.resumo-relatorio-valor {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1;
-  color: #1b2432;
-}
-
-.resumo-relatorio-item p {
+/* Legenda da rosca */
+.legenda {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.legenda li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 12px;
   color: #7a8294;
 }
 
-/* Conclusão */
-.conclusao-lista {
+.legenda strong {
+  margin-left: auto;
+  font-size: 14px;
+  color: #1b2432;
+}
+
+.legenda-ponto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legenda-ponto--concluido { background: #1f6f9c; }
+.legenda-ponto--analise { background: #d98a1c; }
+.legenda-ponto--andamento { background: #e3e7ee; }
+
+/* Listas */
+.lista-simples {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.card-texto {
-  padding: 14px 16px;
+.item-pendencia-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
-.card-texto p {
-  margin: 0 0 12px;
-  font-size: 12px;
-  color: #7a8294;
-}
-
-.card-texto p:last-child {
-  margin-bottom: 0;
-}
-
-/* Exportar */
-.exportar-relatorio h3 {
-  margin: 0 0 8px;
-  font-size: 14px;
+.item-pendencia h4 {
+  margin: 0;
+  font-size: 15px;
   font-weight: 700;
   color: #1b2432;
 }
 
-.exportar-relatorio p {
-  margin: 0 0 16px;
-  font-size: 12px;
+.item-pendencia p {
+  margin: 0 0 12px;
+  font-size: 13px;
   color: #7a8294;
+}
+
+.lista-nomes {
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-nomes li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e3e7ee;
+  font-size: 13px;
+  color: #1b2432;
+}
+
+.lista-nomes li:last-child {
+  border-bottom: none;
+}
+
+/* Balão de status */
+.status {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.status--analise {
+  background: #fdf0d5;
+  color: #d98a1c;
+}
+
+.status--correcao {
+  background: #fde8ea;
+  color: #d9534f;
+}
+
+/* Link "Visualizar ficha" */
+.item-aluno-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f6f9c;
+  text-decoration: none;
+}
+
+/* Rótulo pequeno em maiúsculas */
+.rotulo {
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #7a8294;
+}
+
+/* Selects de curso e turma */
+.selects {
+  display: flex;
+  gap: 12px;
+}
+
+.campo-select {
+  flex: 1;
+  min-width: 0;
+}
+
+.campo-select label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b2432;
+}
+
+.campo-select select {
+  width: 100%;
+  appearance: none;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b2432' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center / 16px;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  padding: 14px 36px 14px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1b2432;
 }

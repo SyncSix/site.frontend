@@ -31,64 +31,125 @@
     </header>
 
     <main class="relatorio">
-      <!-- Resumo -->
-      <section class="card resumo-relatorio">
-        <h3>32 alunos acompanhados</h3>
+      <!-- Filtro (mesmo componente das listas) -->
+      <section class="filtro-turma">
+        <p class="rotulo">Filtrar por curso e turma</p>
 
-        <div class="resumo-relatorio-grid">
-          <div class="resumo-relatorio-item">
-            <span class="resumo-relatorio-valor">9</span>
-            <p>Concluíram</p>
+        <div class="selects">
+          <div class="campo-select">
+            <label for="curso">Curso</label>
+            <select id="curso">
+              <option value="" selected>Todos os cursos</option>
+              <option value="DSM">
+                Desenvolvimento de Software Multiplataforma
+              </option>
+              <option value="CDN">Ciência de Dados para Negócios</option>
+              <option value="CO">Controle de Obras</option>
+              <option value="ENGC">Engenharia Civil</option>
+            </select>
           </div>
-          <div class="resumo-relatorio-item">
-            <span class="resumo-relatorio-valor">6</span>
-            <p>Em análise</p>
+
+          <div class="campo-select">
+            <label for="turma">Turma</label>
+            <select id="turma">
+              <option value="" selected>Todas as turmas</option>
+              <option value="1">1º semestre</option>
+              <option value="2">2º semestre</option>
+              <option value="3">3º semestre</option>
+              <option value="4">4º semestre</option>
+              <option value="5">5º semestre</option>
+              <option value="6">6º semestre</option>
+            </select>
           </div>
         </div>
       </section>
 
-      <!-- Conclusão acadêmica -->
-      <section class="conclusao">
-        <h3 class="titulo-secao">Conclusão acadêmica</h3>
+      <!-- Resumo -->
+      <section class="card">
+        <h3 class="card-titulo">32 alunos acompanhados</h3>
 
-        <div class="conclusao-lista">
-          <div class="card">
-            <div class="turma-resumo">
-              <div
-                class="grafico-rosca"
-                style="--percentual: 28%"
-                role="img"
-                aria-label="9 de 32 alunos"
-              >
-                <div class="grafico-rosca-centro">
-                  <strong>9</strong>
-                  <span>de 32</span>
-                </div>
-              </div>
-
-              <div class="turma-resumo-texto">
-                <strong>9 alunos</strong>
-                <p>com 240h cumpridas</p>
-                <p>32 alunos no total</p>
-              </div>
+        <div class="turma-resumo">
+          <div
+            class="grafico-rosca"
+            style="--percentual: 28%"
+            role="img"
+            aria-label="9 de 32 alunos concluíram"
+          >
+            <div class="grafico-rosca-centro">
+              <strong>9</strong>
+              <span>de 32</span>
             </div>
           </div>
 
-          <div class="card card-texto">
-            <p>Ana Beatriz · outros alunos</p>
-          </div>
+          <ul class="legenda">
+            <li>
+              <span class="legenda-ponto legenda-ponto--concluido"></span
+              >Concluíram <strong>9</strong>
+            </li>
+            <li>
+              <span class="legenda-ponto legenda-ponto--analise"></span>Em
+              análise <strong>6</strong>
+            </li>
+            <li>
+              <span class="legenda-ponto legenda-ponto--andamento"></span>Em
+              andamento <strong>17</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-          <div class="card card-texto">
-            <p>Diego: faltam 180h</p>
-            <p>Camila: relatório final</p>
-          </div>
+      <!-- Pendências -->
+      <section>
+        <h3 class="titulo-secao">Alunos com pendência</h3>
+
+        <div class="lista-simples">
+          <article class="card item-pendencia">
+            <div class="item-pendencia-topo">
+              <h4>Diego Martins</h4>
+              <span class="status status--correcao">Horas pendentes</span>
+            </div>
+            <p>Faltam 180h para concluir</p>
+            <a href="" class="item-aluno-link"
+              >Visualizar ficha <span aria-hidden="true">›</span></a
+            >
+          </article>
+
+          <article class="card item-pendencia">
+            <div class="item-pendencia-topo">
+              <h4>Camila Torres</h4>
+              <span class="status status--analise">Relatório final</span>
+            </div>
+            <p>Aguardando envio do relatório final</p>
+            <a href="" class="item-aluno-link"
+              >Visualizar ficha <span aria-hidden="true">›</span></a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- Concluíram -->
+      <section>
+        <h3 class="titulo-secao">Concluíram o estágio</h3>
+
+        <div class="card">
+          <ul class="lista-nomes">
+            <li>Ana Beatriz</li>
+            <li>Eliane Rocha</li>
+            <li>Lucas Almeida</li>
+          </ul>
+          <a href="" class="item-aluno-link"
+            >Ver todos os 9 alunos <span aria-hidden="true">›</span></a
+          >
         </div>
       </section>
 
       <!-- Exportar -->
-      <section class="card exportar-relatorio">
-        <h3>Gerar relatório acadêmico</h3>
-        <p>Exportar informações do semestre</p>
+      <section class="card">
+        <h3 class="card-titulo">Gerar relatório acadêmico</h3>
+        <p class="card-descricao">
+          Exporta os dados do semestre, respeitando o curso e a turma
+          selecionados.
+        </p>
         <button type="button" class="btn-secundario">Exportar relatório</button>
       </section>
     </main>
