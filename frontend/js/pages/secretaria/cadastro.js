@@ -1,6 +1,7 @@
-const inputBusca = document.getElementById("busca-cadastro");
+const inputBusca = document.getElementById("busca-usuario");
+const selectCurso = document.getElementById("curso");
 const filtros = document.querySelectorAll(".filtros .filtro");
-const cards = document.querySelectorAll(".cad-card");
+const cards = document.querySelectorAll(".usr-card");
 const semResultados = document.querySelector(".sem-resultados");
 
 // Ignora acentos e maiúsculas/minúsculas
@@ -14,22 +15,25 @@ function normalizar(texto) {
 
 function aplicarFiltros() {
   const tipo = document.querySelector(".filtros .filtro--ativo").dataset.filtro;
+  const curso = selectCurso.value;
   const termo = normalizar(inputBusca.value);
 
   let visiveis = 0;
 
   cards.forEach((card) => {
-    // Busca pelo título e pela situação do card
+    // Busca em nome, perfil/RA, curso e situação (não nos botões de ação)
     const texto = normalizar(
-      card.querySelector("h4").textContent +
-        " " +
-        card.querySelector(".cad-card-situacao").textContent
+      [...card.querySelectorAll(".usr-card-topo, .usr-perfil, .usr-info, .usr-cursos")]
+        .map((el) => el.textContent)
+        .join(" ")
     );
 
     const bateTipo = tipo === "todos" || card.dataset.tipo === tipo;
+    // data-curso pode ter mais de um valor (professor): "DSM CDN"
+    const bateCurso = !curso || card.dataset.curso.split(" ").includes(curso);
     const bateBusca = !termo || texto.includes(termo);
 
-    const visivel = bateTipo && bateBusca;
+    const visivel = bateTipo && bateCurso && bateBusca;
     card.hidden = !visivel;
 
     if (visivel) visiveis++;
@@ -51,4 +55,5 @@ filtros.forEach((btn) => {
   });
 });
 
+selectCurso.addEventListener("change", aplicarFiltros);
 inputBusca.addEventListener("input", aplicarFiltros);
