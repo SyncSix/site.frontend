@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../../styles/global.css" />
     <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
     <link rel="stylesheet" href="../../styles/components/card-estagio.css" />
-    <link rel="stylesheet" href="../../styles/components/header.css" />
+    <link rel="stylesheet" href="../../styles/components/header.css" />    
+    <link rel="stylesheet" href="../../styles/components/btn-voltar.css" />    
     <link rel="stylesheet" href="../../styles/pages/aluno/novo-estagio.css" />
 
     <title>Tipo de Estágio</title>
@@ -19,7 +20,7 @@
           type="button"
           class="btn-voltar"
           aria-label="Voltar"
-          data-voltar="estagios.html"
+          data-voltar="nova-atividade.html"
         ></button>
         SITE - Sistema Integrado de Trabalho e Estágio
       </span>
@@ -38,9 +39,9 @@
     </header>
 
     <main>
-      <button class="opcao" type="button">Não obrigatório remunerado.</button>
-      <button class="opcao" type="button">Obrigatório remunerado.</button>
-      <button class="opcao" type="button">Obrigatório não remunerado.</button>
+      <a href="cadastro-estagio.html" class="opcao" >Não obrigatório remunerado.</a>
+      <a class="opcao" >Obrigatório remunerado.</a>
+      <a class="opcao" >Obrigatório não remunerado.</a>
 
       <p class="aviso">Plano de Atividades acompanha o termo</p>
 
@@ -65,16 +66,6 @@
         <span>Estágios</span>
       </a>
 
-      <a href="#documentos" class="bottom-nav__item">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"
-          />
-          <path d="M14 3v5h5M9 13h6M9 17h6" />
-        </svg>
-        <span>Documentos</span>
-      </a>
-
       <a href="perfil.html" class="bottom-nav__item">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="8" r="4" />
@@ -85,6 +76,7 @@
     </nav>
 
     <script src="../../js/pages/aluno/novo-estagio.js"></script>
+    <script src="../../js/components/btn-voltar.js"></script>
     <script src="../../js/components/menu-navbar.js"></script>
   </body>
 </html>

@@ -1,6 +1,13 @@
 body {
-    background-color: var(--bg);
-    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  background-color: var(--bg);
+  padding-bottom: calc(76px + env(safe-area-inset-bottom));
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 14px 25px;
 }
 
 /* Card de Progresso */
@@ -43,7 +50,7 @@ body {
 }
 
 .progress-card__fill {
-  width: 0;               /* o JS define a largura */
+  width: 0; /* o JS define a largura */
   height: 100%;
   border-radius: 999px;
   background: var(--card-fill);
@@ -71,7 +78,9 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .progress-card__fill { transition: none; }
+  .progress-card__fill {
+    transition: none;
+  }
 }
 
 /* Section Notificações */
@@ -112,7 +121,6 @@ body {
   color: #7a8294;
 }
 
-
 /* Seção próxima ação */
 .proxima-acao {
   margin-top: 14px;
@@ -131,7 +139,7 @@ body {
 }
 
 .card-proxima-acao {
-  background-color: #FFF5E3;
+  background-color: #fff5e3;
   border-radius: 20px;
   padding: 16px;
 }
@@ -161,15 +169,14 @@ body {
   cursor: pointer;
   text-align: center;
   width: 100%;
-  background-color: #176B9A;
-  color: #FFF;
+  background-color: #176b9a;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
   padding-block: 13px;
   border-radius: 20px;
 }
-
 
 /* Ações Rápidas */
 .acoes-rapidas {

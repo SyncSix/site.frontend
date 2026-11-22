@@ -28,6 +28,7 @@ main {
   color: #0b4a6f;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
 }
 
 .opcao:hover {
