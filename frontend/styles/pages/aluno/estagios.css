@@ -1,8 +1,6 @@
-@import url(../../global.css);
-
 body {
-    background-color: var(--bg);
-     padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  background-color: var(--bg);
+  padding-bottom: var(--bottom-nav-spacing);
 }
 
 .atividades {
@@ -27,7 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 16px 8px;
 }
@@ -36,66 +34,24 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 1;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .card-resumo-text {
   margin: 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .card-atividade[hidden] {
   display: none;
 }
 
-.sem-resultados {
-  margin: 0;
-  padding: 24px 0;
-  text-align: center;
-  font-size: 13px;
-  color: #7a8294;
-}
-
-.sem-resultados[hidden] {
-  display: none;
-}
-
-/* Filtros */
-.filtros {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.filtros::-webkit-scrollbar {
-  display: none;
-}
-
-.filtro {
-  flex-shrink: 0;
-  border: 1px solid #e3e7ee;
-  background: #fff;
-  border-radius: 999px;
-  padding: 10px 18px;
-  font-family: inherit;
-  font-size: 13px;
-  color: #1b2432;
-  cursor: pointer;
-}
-
-.filtro--ativo {
-  background: #1b2432;
-  border-color: #1b2432;
-  color: #fff;
-}
-
 .modalidades {
   margin: 0;
   font-size: 12px;
   line-height: 1.5;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Lista */
@@ -106,7 +62,7 @@ body {
 }
 
 .card-atividade {
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 16px 14px;
 }
@@ -124,7 +80,7 @@ body {
   align-items: center;
   gap: 10px;
   font-size: 13px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .card-atividade-tipo img {
@@ -140,42 +96,42 @@ body {
 }
 
 .status--andamento {
-  background: #e3eefa;
-  color: #1f6f9c;
+  background: var(--info-bg);
+  color: var(--accent);
 }
 
 .status--analise {
-  background: #fdf0d5;
-  color: #d98a1c;
+  background: var(--warning-bg);
+  color: var(--warning);
 }
 
 .status--correcao {
-  background: #fde8ea;
-  color: #d9534f;
+  background: var(--error-bg);
+  color: var(--error);
 }
 
 .card-atividade-titulo {
   margin: 0 0 12px;
   font-size: 15px;
   font-weight: 600;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .card-atividade-info {
   margin: 0 0 12px;
   font-size: 13px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .card-atividade-horas {
   margin: 0 0 8px;
   font-size: 13px;
-  color: #1f6f9c;
+  color: var(--accent);
 }
 
 .barra {
   height: 6px;
-  background: #e3e7ee;
+  background: var(--border);
   border-radius: 999px;
   overflow: hidden;
   margin-bottom: 16px;
@@ -183,7 +139,7 @@ body {
 
 .barra-preenchimento {
   height: 100%;
-  background: #1f6f9c;
+  background: var(--accent);
   border-radius: 999px;
 }
 
@@ -192,7 +148,7 @@ body {
   align-items: center;
   justify-content: space-between;
   font-size: 13px;
-  color: #1f6f9c;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -206,8 +162,8 @@ body {
   position: sticky;
   bottom: 16px;
   display: block;
-  background: #1f6f9c;
-  color: #fff;
+  background: var(--accent);
+  color: var(--white);
   text-align: center;
   text-decoration: none;
   font-size: 14px;

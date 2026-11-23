@@ -1,8 +1,5 @@
 :root {
-  --nav-bg: #ffffff;
-  --nav-text: #748798;
-  --nav-active: #126C9F;
-  --nav-active-bg: #EAF4FB;
+  --bottom-nav-spacing: calc(76px + env(safe-area-inset-bottom));
 }
 
 /* Menu de Navegação */
@@ -17,7 +14,7 @@
   align-items: center;
   gap: 4px;
   padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
-  background: var(--nav-bg);
+  background: var(--white);
   box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -31,7 +28,7 @@
   border-radius: 12px;
   color: var(--nav-text);
   text-decoration: none;
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: var(--font-system);
   font-size: 0.75rem;
   line-height: 1;
   transition: background 0.2s, color 0.2s;
@@ -50,7 +47,7 @@
 
 .bottom-nav__item.is-active {
   color: var(--nav-active);
-  background: var(--nav-active-bg);
+  background: var(--secondary-bg);
 }
 
 .bottom-nav__item:focus-visible {

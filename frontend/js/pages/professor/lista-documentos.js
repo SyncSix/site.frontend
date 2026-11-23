@@ -5,14 +5,6 @@ const filtrosSituacao = document.querySelectorAll(".situacao .filtro");
 const cardsDocumentos = document.querySelectorAll(".item-aluno");
 const semResultados = document.querySelector(".sem-resultados");
 
-function normalizar(texto) {
-  return texto
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim();
-}
-
 function aplicarFiltros() {
   const situacao = document.querySelector(".situacao .filtro--ativo").dataset.filtro;
   const curso = selectCurso.value;

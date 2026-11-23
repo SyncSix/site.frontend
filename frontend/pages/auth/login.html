@@ -14,7 +14,7 @@
         alt="Logo FATEC Votorantim"
       />
       <p class="subtitulo">Acesse com seus dados acadêmicos</p>
-      <form action="">
+      <form>
         <div class="form-email">
           <label for="email" class="label-email">Email ou RA</label>
           <input type="email" class="input-email" id="email" 
@@ -29,6 +29,7 @@
             class="toggle-password"
             aria-label="Mostrar senha"
             aria-pressed="false"
+            aria-controls="password"
           ></button>
         </div>
         <button type="submit" class="btn-form-login">Entrar</button>
@@ -41,6 +42,7 @@
       </div>
       <a href="./cadastro.html" class="btn-primeiro-acesso">Primeiro Acesso</a>
     </main>
-    <script src="../../js/pages/login.js"></script>
+    <script src="../../js/components/toggle-password.js"></script>
+    <script src="../../js/pages/auth/login.js"></script>
   </body>
 </html>

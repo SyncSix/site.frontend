@@ -4,29 +4,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+  /* Cores de base */
   --bg: #edf4f9;
+  --white: #ffffff;
   --primary: #176b9a;
-  --secondary: #f67c42;
-  --success: #25996c;
-  --atention: #bc862f;
-  --error: #cf5961;
-  --primary-dark: #124a70;
-  --info-bg: #eaf4fb;
-  --page: #f6f7fa;
-  --track: #E5EAF0;
+  --accent: #1f6f9c;
+  --secondary-bg: #eaf4fb;
+  --text: #1b2432;
+  --text-muted: #7a8294;
+  --text-secondary: #5c6370;
+  --text-header: #73818e;
+  --text-detail: #5a6275;
+  --ink: #111827;
+  --gray: #6b7280;
+  --border: #e3e7ee;
+  --input-border: #d1d6de;
+  --overlay: rgba(27, 36, 50, 0.5);
 
-  --btn-primary: #176B9A;
-  --btn-secondary: #EAF4FB;
+  /* Status */
+  --info-bg: #e3eefa;
+  --info-border: #cfe0f3;
+  --success: #2e8b57;
+  --success-bg: #e4f3ea;
+  --warning: #d98a1c;
+  --warning-bg: #fdf0d5;
+  --warning-bg-soft: #fdf3de;
+  --warning-border: #f6e5bf;
+  --error: #d9534f;
+  --error-bg: #fde8ea;
+  --danger-dark: #b91c1c;
 
-  --nav-bg: #ffffff;
+  /* Autenticação */
+  --auth-blue: #064376;
+  --auth-text: #1a1a2e;
+  --auth-divider: #758487;
+
+  /* Navegação e progresso */
   --nav-text: #748798;
-  --nav-active: #126C9F;
-  --nav-active-bg: #EAF4FB;
+  --nav-active: #126c9f;
   --card-bg: #17476f;
   --card-track: #e3ebf3;
   --card-fill: #f47c3c;
 
-  --font-primary: "Poppins", sans-serif;
+  /* Telas de estágio do aluno */
+  --student-bg: #f4f6fa;
+  --student-border: #e3e8f0;
+  --student-text: #1b2433;
+  --student-muted: #6b7686;
+  --student-blue: #146c9c;
+  --student-blue-dark: #0b4a6f;
+  --student-blue-light: #e4effa;
+  --student-shadow: rgba(20, 50, 90, 0.06);
+  --option-bg: #e8f0f7;
+  --option-text: #2a5f82;
+
+  /* Tipografia */
+  --font-poppins: "Poppins";
+  --font-primary: var(--font-poppins), sans-serif;
+  --font-system: var(--font-poppins), system-ui, sans-serif;
+  --font-arial: var(--font-poppins), Arial, sans-serif;
 }
 
 * {
@@ -34,5 +70,4 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-primary);
-  /* background-color: var(--bg); */
 }

@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Check source branch
         run: |
-          if [ "${{ github.head_ref }}" != "developer" ]; then
+          if [ "$GITHUB_HEAD_REF" != "developer" ]; then
             echo "Pull Requests para main só são permitidos a partir da branch developer."
             exit 1
           fi

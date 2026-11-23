@@ -1,8 +1,6 @@
-@import url(../../global.css);
-
 body {
-    background-color: var(--bg);
-    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  background-color: var(--bg);
+  padding-bottom: var(--bottom-nav-spacing);
 }
 
 .ace {
@@ -17,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 16px;
 }
@@ -29,24 +27,24 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  background: #1f6f9c;
+  background: var(--accent);
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
 }
 
 .ace-resumo h2 {
   margin: 0 0 4px;
   font-size: 14px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-resumo p {
   margin: 0;
   font-size: 12px;
   line-height: 1.4;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Busca */
@@ -54,22 +52,22 @@ body {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #e3e7ee;
+  border: 1px solid var(--border);
   border-radius: 12px;
-  background: #fff;
+  background: var(--white);
   padding: 12px 14px;
   font-family: inherit;
   font-size: 13px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-busca input:focus {
   outline: none;
-  border-color: #1f6f9c;
+  border-color: var(--accent);
 }
 
 .ace-busca input::placeholder {
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Seções */
@@ -77,7 +75,7 @@ body {
   margin: 0 0 12px;
   font-size: 18px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-fila {
@@ -88,7 +86,7 @@ body {
 
 /* Card da solicitação */
 .ace-card {
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 16px;
 }
@@ -109,20 +107,20 @@ body {
   margin: 0;
   font-size: 15px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-ra {
   margin: 0 0 4px;
   font-size: 12px;
   line-height: 1.4;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-data {
   margin: 0 0 14px;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Balões */
@@ -134,11 +132,11 @@ body {
   white-space: nowrap;
 }
 
-.ace-balao--aluno { background: #e3eefa; color: #1f6f9c; }
-.ace-balao--professor { background: #e4f3ea; color: #2e8b57; }
-.ace-balao--liberar { background: #e4f3ea; color: #2e8b57; }
-.ace-balao--correcao { background: #fdf0d5; color: #d98a1c; }
-.ace-balao--bloquear { background: #fde8ea; color: #d9534f; }
+.ace-balao--aluno { background: var(--info-bg); color: var(--accent); }
+.ace-balao--professor { background: var(--success-bg); color: var(--success); }
+.ace-balao--liberar { background: var(--success-bg); color: var(--success); }
+.ace-balao--correcao { background: var(--warning-bg); color: var(--warning); }
+.ace-balao--bloquear { background: var(--error-bg); color: var(--error); }
 
 /* Conferência de dados */
 .ace-checks {
@@ -158,7 +156,7 @@ body {
   gap: 10px;
   font-size: 12px;
   line-height: 1.4;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-check::before {
@@ -170,17 +168,17 @@ body {
   border-radius: 50%;
   font-size: 10px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
 }
 
 .ace-check--ok::before {
   content: "✓";
-  background: #2e8b57;
+  background: var(--success);
 }
 
 .ace-check--alerta::before {
   content: "!";
-  background: #d98a1c;
+  background: var(--warning);
 }
 
 /* Botões de decisão */
@@ -207,24 +205,24 @@ body {
 }
 
 .ace-btn--liberar {
-  background: #1f6f9c;
-  color: #fff;
+  background: var(--accent);
+  color: var(--white);
 }
 
 .ace-btn--correcao {
-  background: #fdf3de;
-  border-color: #f6e5bf;
-  color: #d98a1c;
+  background: var(--warning-bg-soft);
+  border-color: var(--warning-border);
+  color: var(--warning);
 }
 
 .ace-btn--bloquear {
-  background: #fde8ea;
+  background: var(--error-bg);
   border-color: #f7ccd0;
-  color: #d9534f;
+  color: var(--error);
 }
 
 .ace-btn:focus-visible {
-  outline: 2px solid #1f6f9c;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -233,7 +231,7 @@ body {
   padding: 24px 0;
   text-align: center;
   font-size: 13px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .ace-vazio[hidden] {
@@ -251,7 +249,7 @@ body {
 }
 
 .ace-hist-item {
-  background: #fff;
+  background: var(--white);
   border-radius: 14px;
   padding: 12px 16px;
 }
@@ -266,13 +264,13 @@ body {
 
 .ace-hist-topo strong {
   font-size: 13px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-hist-item p {
   margin: 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Janela de confirmação */
@@ -286,20 +284,20 @@ body {
 }
 
 .ace-dialog::backdrop {
-  background: rgba(27, 36, 50, 0.5);
+  background: var(--overlay);
 }
 
 .ace-dialog h3 {
   margin: 0 0 6px;
   font-size: 16px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-dialog-nome {
   margin: 0 0 16px;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .ace-dialog-rotulo {
@@ -307,35 +305,35 @@ body {
   margin-bottom: 8px;
   font-size: 13px;
   font-weight: 600;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-dialog textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #e3e7ee;
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 12px 14px;
   resize: vertical;
   font-family: inherit;
   font-size: 13px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ace-dialog textarea:focus {
   outline: none;
-  border-color: #1f6f9c;
+  border-color: var(--accent);
 }
 
 .ace-dialog textarea.ace-campo-erro {
-  border-color: #d9534f;
+  border-color: var(--error);
 }
 
 .ace-erro {
   margin: 8px 0 0;
   font-size: 12px;
-  color: #d9534f;
+  color: var(--error);
 }
 
 .ace-erro[hidden] {
@@ -350,12 +348,12 @@ body {
 }
 
 .ace-btn--cancelar {
-  background: #fff;
-  border-color: #e3e7ee;
-  color: #1b2432;
+  background: var(--white);
+  border-color: var(--border);
+  color: var(--text);
 }
 
 .ace-btn--confirmar {
-  background: #1f6f9c;
-  color: #fff;
+  background: var(--accent);
+  color: var(--white);
 }

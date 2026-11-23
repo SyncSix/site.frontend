@@ -34,7 +34,7 @@ const dados = {
 // Lê o número depois do "?id=" na URL (se não achar, usa o aluno 1)
 const id = new URLSearchParams(location.search).get("id");
 const [nome, ra, curso, turma, situacao, total, estagio, equivalencia] =
-  dados[id] ?? dados[1];
+  Object.hasOwn(dados, id) ? dados[id] : dados[1];
 
 const validadas = estagio + equivalencia;
 const campo = (n) => document.querySelector(`[data-campo="${n}"]`);

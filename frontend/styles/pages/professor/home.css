@@ -1,8 +1,6 @@
-@import url(../../global.css);
-
 body {
-    background-color: var(--bg);
-    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  background-color: var(--bg);
+  padding-bottom: var(--bottom-nav-spacing);
 }
 
 .home-professor {
@@ -14,7 +12,7 @@ body {
 
 /* Visão geral */
 .visao-geral {
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 14px;
 }
@@ -29,7 +27,7 @@ body {
   font-size: 13px;
   margin-bottom: 10px;
   margin-left: 5px;
-  color: #73818E;
+  color: var(--text-header);
 }
 
 .card-numero {
@@ -39,32 +37,32 @@ body {
   justify-content: center;
   gap: 8px;
   min-height: 90px;
-  background: #fff;
-  border: 1px solid #1f6f9c;
+  background: var(--white);
+  border: 1px solid var(--accent);
   border-radius: 12px;
   padding: 12px 8px;
 }
 
 .card-numero--destaque {
-  background: #1f6f9c;
+  background: var(--accent);
 }
 
 .card-numero-valor {
   font-size: 22px;
   font-weight: 700;
   line-height: 1;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .card-numero-texto {
   margin: 0;
   font-size: 11px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .card-numero--destaque .card-numero-valor,
 .card-numero--destaque .card-numero-texto {
-  color: #fff;
+  color: var(--white);
 }
 
 /* Títulos das seções */
@@ -73,7 +71,7 @@ body {
   margin: 0 0 12px;
   font-size: 18px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 /* Situação da turma */
@@ -81,7 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 18px 16px;
 }
@@ -99,7 +97,7 @@ body {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: conic-gradient(#1f6f9c var(--percentual), #e3e7ee 0);
+  background: conic-gradient(var(--accent) var(--percentual), var(--border) 0);
 }
 
 .grafico-rosca-centro {
@@ -110,31 +108,31 @@ body {
   width: 66px;
   height: 66px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--white);
 }
 
 .grafico-rosca-centro strong {
   font-size: 22px;
   line-height: 1;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .grafico-rosca-centro span {
   font-size: 10px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .turma-resumo-texto strong {
   display: block;
   margin-bottom: 4px;
   font-size: 16px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .turma-resumo-texto p {
   margin: 0 0 2px;
   font-size: 11px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .linha-progresso-topo {
@@ -142,12 +140,12 @@ body {
   justify-content: space-between;
   margin-bottom: 8px;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .linha-progresso-topo strong {
   font-size: 13px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .linha-progresso .barra {
@@ -162,7 +160,7 @@ body {
 }
 
 .card-prioridade {
-  background: #fff;
+  background: var(--white);
   border-radius: 14px;
   padding: 14px 16px;
 }
@@ -171,20 +169,20 @@ body {
   margin: 0 0 6px;
   font-size: 14px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .card-prioridade p {
   margin: 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Botão */
 .btn-avaliacoes {
   display: block;
-  background: #1f6f9c;
-  color: #fff;
+  background: var(--accent);
+  color: var(--white);
   text-align: center;
   text-decoration: none;
   font-size: 14px;
@@ -195,14 +193,14 @@ body {
 
 .barra {
   height: 6px;
-  background: #e3e7ee;
+  background: var(--border);
   border-radius: 999px;
   overflow: hidden;
 }
 
 .barra-preenchimento {
   height: 100%;
-  background: #1f6f9c;
+  background: var(--accent);
   border-radius: 999px;
 }
 

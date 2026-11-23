@@ -1,10 +1,10 @@
 header {
     padding: 60px 25px 18px 25px;
     padding-inline: 25px;
-    background-color: #FFF;
+    background-color: var(--white);
 
     p { 
-        color: #73818E;
+        color: var(--text-header);
     }
 }
 

@@ -1,8 +1,6 @@
-@import url(../../global.css);
-
 body {
-    background-color: var(--bg);
-    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  background-color: var(--bg);
+  padding-bottom: var(--bottom-nav-spacing);
 }
 
 .sec {
@@ -14,7 +12,7 @@ body {
 
 /* Painel */
 .sec-painel {
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 18px 16px;
 }
@@ -24,7 +22,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
-  color: #1f6f9c;
+  color: var(--accent);
 }
 
 .sec-titulo {
@@ -32,13 +30,13 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
-  color: #5a6275;
+  color: var(--text-detail);
 }
 
 .sec-aviso {
   margin: 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Indicadores */
@@ -55,32 +53,32 @@ body {
   justify-content: center;
   gap: 10px;
   min-height: 90px;
-  background: #fff;
-  border: 1px solid #1f6f9c;
+  background: var(--white);
+  border: 1px solid var(--accent);
   border-radius: 16px;
   padding: 14px 8px;
 }
 
 .sec-indicador--destaque {
-  background: #1f6f9c;
+  background: var(--accent);
 }
 
 .sec-indicador-valor {
   font-size: 24px;
   font-weight: 700;
   line-height: 1;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .sec-indicador-texto {
   margin: 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .sec-indicador--destaque .sec-indicador-valor,
 .sec-indicador--destaque .sec-indicador-texto {
-  color: #fff;
+  color: var(--white);
 }
 
 /* Ações prioritárias */
@@ -88,7 +86,7 @@ body {
   margin: 8px 0 12px;
   font-size: 18px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .sec-acoes {
@@ -101,7 +99,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  background: #fff;
+  background: var(--white);
   border-radius: 16px;
   padding: 16px;
   text-decoration: none;
@@ -117,17 +115,17 @@ body {
   margin: 0 0 4px;
   font-size: 14px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .sec-acao p {
   margin: 0;
   font-size: 12px;
   line-height: 1.4;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .sec-acao:focus-visible {
-  outline: 2px solid #1f6f9c;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }

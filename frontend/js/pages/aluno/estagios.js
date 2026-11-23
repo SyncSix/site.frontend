@@ -3,15 +3,6 @@ const filtros = document.querySelectorAll(".filtros .filtro");
 const cards = document.querySelectorAll(".card-atividade");
 const semResultados = document.querySelector(".sem-resultados");
 
-// Ignora acentos e maiúsculas/minúsculas
-function normalizar(texto) {
-  return texto
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim();
-}
-
 function aplicarFiltros() {
   const filtro = document.querySelector(".filtros .filtro--ativo").dataset.filtro;
   const termo = normalizar(inputBusca.value);

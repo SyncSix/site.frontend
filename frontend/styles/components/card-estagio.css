@@ -7,11 +7,11 @@
   margin: 0 0 16px;
   font-size: 24px;
   font-weight: 600;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .card-estagio {
-  background: #fff;
+  background: var(--white);
   border-radius: 28px;
   padding: 24px 20px;
 }
@@ -32,24 +32,24 @@
   margin: 0;
   font-size: 18px;
   font-weight: 600;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .estagio-cargo {
   margin: 0 0 16px;
   font-size: 14px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .estagio-horas {
   margin: 0 0 10px;
   font-size: 15px;
-  color: #1f6f9c;
+  color: var(--accent);
 }
 
 .estagio-barra {
   height: 8px;
-  background: #e3e7ee;
+  background: var(--border);
   border-radius: 999px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -57,14 +57,14 @@
 
 .estagio-barra-preenchimento {
   height: 100%;
-  background: #1f6f9c;
+  background: var(--accent);
   border-radius: 999px;
 }
 
 .estagio-info {
   margin: 0 0 12px;
   font-size: 14px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .estagio-info:last-child {

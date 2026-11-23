@@ -1,14 +1,3 @@
-// Botão de voltar
-document.querySelectorAll("[data-voltar]").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    if (btn.dataset.voltar) {
-      window.location.href = "./login.html";
-    } else {
-      window.location.href = "./login.html";
-    }
-  });
-});
-
 // ===== Pop-up de erro (topo da tela) =====
 function mostrarErro(mensagem, campo) {
   document.querySelector(".popup-overlay")?.remove();

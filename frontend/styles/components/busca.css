@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #fff;
-  border: 1px solid #e3e7ee;
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 10px 14px;
 }
@@ -23,9 +23,9 @@
   background: transparent;
   font-family: inherit;
   font-size: 13px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .busca input::placeholder {
-  color: #7a8294;
+  color: var(--text-muted);
 }

@@ -1,6 +1,6 @@
 body {
   background-color: var(--bg);
-  padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  padding-bottom: var(--bottom-nav-spacing);
 }
 
 .modalidades-lista {
@@ -13,8 +13,8 @@ body {
 .card-modalidade {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border: 1px solid #e3e7ee;
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px 14px;
   text-decoration: none;
@@ -30,12 +30,12 @@ body {
 .card-modalidade p {
   margin: 0 0 12px;
   font-size: 13px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .card-modalidade-link {
   font-size: 13px;
-  color: #73818E;
+  color: var(--text-header);
 }
 
 /* respeita quem prefere menos animação */

@@ -40,15 +40,6 @@ const decisoes = {
 let cardAtual = null;
 let decisaoAtual = null;
 
-// Ignora acentos e maiúsculas/minúsculas
-function normalizar(texto) {
-  return texto
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim();
-}
-
 function atualizarFila() {
   const cards = fila.querySelectorAll(".ace-card");
   const termo = normalizar(busca.value);

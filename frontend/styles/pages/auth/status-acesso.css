@@ -25,7 +25,7 @@ h1 {
 .subtitulo {
   text-align: center;
   font-size: 12px;
-  color: #5c6370;
+  color: var(--text-secondary);
   margin-bottom: 10px;
 }
 
@@ -36,17 +36,13 @@ h1 {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: var(--btn-secondary);
+  background: var(--secondary-bg);
   text-decoration: none;
   color: var(--primary);
   border-style: none;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-}
-
-.btn-form-recuperacao:hover {
-  opacity: 0.9;
 }
 
 .btn-voltar {
@@ -57,7 +53,7 @@ h1 {
   height: 24px;
   padding: 0;
   border: none;
-  background-color: var(--primary); /* cor do ícone */
+  background-color: var(--primary);
   -webkit-mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center / contain;
   mask: url("../../assets/icons/icon-btnVoltar.svg") no-repeat center / contain;
   cursor: pointer;
@@ -65,10 +61,10 @@ h1 {
 }
 
 .btn-voltar:hover {
-  background-color: #6b7280;
+  background-color: var(--gray);
 }
 
 .btn-voltar:focus-visible {
-  outline: 2px solid #111827;
+  outline: 2px solid var(--ink);
   outline-offset: 4px;
 }

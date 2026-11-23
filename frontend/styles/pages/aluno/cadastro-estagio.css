@@ -1,32 +1,9 @@
-@import url(../../global.css);
-
 body {
-  background-color: var(--bg);
-  padding-bottom: calc(76px + env(safe-area-inset-bottom));
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --fundo: #f4f6fa;
-  --card: #ffffff;
-  --borda: #e3e8f0;
-  --titulo: #1b2433;
-  --texto-suave: #6b7686;
-  --azul: #146c9c;
-  --azul-escuro: #0b4a6f;
-  --azul-claro: #e4effa;
-}
-
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: var(--fundo);
-  color: var(--titulo);
+  font-family: var(--font-arial);
+  background: var(--student-bg);
+  color: var(--student-text);
   min-height: 100vh;
+  padding-bottom: var(--bottom-nav-spacing);
 }
 
 /* Parte principal da tela */
@@ -39,25 +16,12 @@ main {
   gap: 16px;
 }
 
-/* Título da tela */
-.topo h1 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--titulo);
-}
-
-.topo p {
-  font-size: 13px;
-  color: var(--texto-suave);
-  margin-top: 2px;
-}
-
 /* Card de cada grupo de campos */
 .grupo {
-  background: var(--card);
+  background: var(--white);
   border-radius: 18px;
   padding: 18px 16px;
-  box-shadow: 0 4px 14px rgba(20, 50, 90, 0.06);
+  box-shadow: 0 4px 14px var(--student-shadow);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -68,7 +32,7 @@ main {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: var(--texto-suave);
+  color: var(--student-muted);
 }
 
 .grupo-titulo svg {
@@ -87,18 +51,18 @@ main {
 .campo span {
   font-size: 13px;
   font-weight: 600;
-  color: var(--titulo);
+  color: var(--student-text);
 }
 
 .campo input {
   width: 100%;
-  background: var(--fundo);
-  border: 1px solid var(--borda);
+  background: var(--student-bg);
+  border: 1px solid var(--student-border);
   border-radius: 12px;
   padding: 11px 14px;
   font-family: inherit;
   font-size: 14px;
-  color: var(--titulo);
+  color: var(--student-text);
   outline: none;
   transition:
     border-color 0.2s,
@@ -110,8 +74,8 @@ main {
 }
 
 .campo input:focus {
-  border-color: var(--azul);
-  background: #ffffff;
+  border-color: var(--student-blue);
+  background: var(--white);
 }
 
 /* Dois campos lado a lado */
@@ -128,8 +92,8 @@ main {
 /* Botão Continuar */
 .botao {
   width: 100%;
-  background: var(--azul);
-  color: #ffffff;
+  background: var(--student-blue);
+  color: var(--white);
   border: none;
   border-radius: 999px;
   padding: 14px;
@@ -141,50 +105,10 @@ main {
 }
 
 .botao:hover {
-  background: var(--azul-escuro);
+  background: var(--student-blue-dark);
 }
 
-.botao:focus-visible,
-.menu a:focus-visible {
-  outline: 3px solid var(--azul);
+.botao:focus-visible {
+  outline: 3px solid var(--student-blue);
   outline-offset: 2px;
-}
-
-/* Menu fixo embaixo */
-.menu {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 420px;
-  background: #ffffff;
-  border-top: 1px solid var(--borda);
-  display: flex;
-  justify-content: space-around;
-  padding: 8px 10px;
-}
-
-.menu a {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  padding: 7px 4px;
-  border-radius: 12px;
-  font-size: 11px;
-  color: var(--texto-suave);
-  text-decoration: none;
-}
-
-.menu a svg {
-  width: 22px;
-  height: 22px;
-}
-
-.menu a.ativo {
-  background: var(--azul-claro);
-  color: var(--azul);
-  font-weight: 600;
 }

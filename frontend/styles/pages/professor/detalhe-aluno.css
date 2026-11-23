@@ -1,8 +1,6 @@
-@import url(../../global.css);
-
 body {
-    background-color: var(--bg);
-    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  background-color: var(--bg);
+  padding-bottom: var(--bottom-nav-spacing);
 }
 
 .ficha {
@@ -15,7 +13,7 @@ body {
 /* Card base */
 .ficha-card {
   display: block;
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 18px 16px;
   text-decoration: none;
@@ -27,13 +25,13 @@ body {
   font-size: 15px;
   font-weight: 700;
   line-height: 1.4;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ficha-turma {
   margin: 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 /* Horas */
@@ -41,13 +39,13 @@ body {
   margin: 0 0 10px;
   font-size: 22px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ficha-restante {
   margin: 0 0 12px;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .ficha-carga {
@@ -56,26 +54,26 @@ body {
   justify-content: space-between;
   margin-bottom: 16px;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .ficha-carga strong {
   margin-right: 8px;
   font-size: 14px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 /* Barra de progresso */
 .ficha-barra {
   height: 8px;
-  background: #e3e7ee;
+  background: var(--border);
   border-radius: 999px;
   overflow: hidden;
 }
 
 .ficha-barra-preenchimento {
   height: 100%;
-  background: #1f6f9c;
+  background: var(--accent);
   border-radius: 999px;
 }
 
@@ -84,17 +82,17 @@ body {
   margin: 0 0 10px;
   font-size: 15px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ficha-link p {
   margin: 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .ficha-link:focus-visible {
-  outline: 2px solid #1f6f9c;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -115,7 +113,7 @@ body {
 .ficha-info {
   margin: 0 0 6px;
   font-size: 12px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 /* Balões de status */
@@ -127,10 +125,10 @@ body {
   white-space: nowrap;
 }
 
-.ficha-status--andamento { background: #e3eefa; color: #1f6f9c; }
-.ficha-status--aprovado { background: #e4f3ea; color: #2e8b57; }
-.ficha-status--analise { background: #fdf0d5; color: #d98a1c; }
-.ficha-status--correcao { background: #fde8ea; color: #d9534f; }
+.ficha-status--andamento { background: var(--info-bg); color: var(--accent); }
+.ficha-status--aprovado { background: var(--success-bg); color: var(--success); }
+.ficha-status--analise { background: var(--warning-bg); color: var(--warning); }
+.ficha-status--correcao { background: var(--error-bg); color: var(--error); }
 
 /* Horas: a barra agora vem antes das linhas de origem */
 .ficha-barra {
@@ -146,7 +144,7 @@ body {
   margin: 0 0 12px;
   font-size: 15px;
   font-weight: 700;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ficha-item {
@@ -155,7 +153,7 @@ body {
   justify-content: space-between;
   gap: 8px;
   padding: 10px 0;
-  border-bottom: 1px solid #e3e7ee;
+  border-bottom: 1px solid var(--border);
 }
 
 .ficha-item:last-child {
@@ -166,21 +164,21 @@ body {
 .ficha-item-nome {
   margin: 0;
   font-size: 13px;
-  color: #1b2432;
+  color: var(--text);
 }
 
 .ficha-item-data {
   margin: 4px 0 0;
   font-size: 12px;
-  color: #7a8294;
+  color: var(--text-muted);
 }
 
 .ficha-acao {
   padding: 8px 18px;
   border-radius: 999px;
-  background: #1f6f9c;
+  background: var(--accent);
   font-size: 12px;
   font-weight: 600;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
