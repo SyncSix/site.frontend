@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
+    <link rel="stylesheet" href="../../styles/components/header.css" />
+    <link rel="stylesheet" href="../../styles/pages/secretaria/usuarios.css" />
+    <link rel="stylesheet" href="../../styles/responsividade.css" />
+    <script defer src="../../js/components/menu-responsivo.js"></script>
+
+    <title>Análise de usuários | SITE</title>
+  </head>
+  <body>
+    <header>
+      <span class="info-SITE"
+        >SITE - Sistema Integrado de Trabalho e Estágio</span
+      >
+      <div class="header-info">
+        <div class="header-info-text">
+          <h2>Analisar usuários</h2>
+          <p>Verficação de usuários</p>
+        </div>
+        <div class="header-info-icon">
+          <img
+            src="../../assets/icons/icon-notificacao-on.svg"
+            alt="Notificações existentes"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="usr">
+      <!-- Busca e filtros -->
+      <section class="usr-topo">
+        <label class="busca">
+          <img src="../../assets/icons/icon-filter.svg" alt="" />
+          <input
+            type="search"
+            id="busca-usuario"
+            placeholder="Buscar por nome, RA ou situação"
+          />
+        </label>
+
+        <div class="filtros filtros--compactos">
+          <button
+            class="filtro filtro--ativo"
+            type="button"
+            aria-pressed="true"
+            data-filtro="todos"
+          >
+            Todos
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            aria-pressed="false"
+            data-filtro="aluno"
+          >
+            Alunos
+          </button>
+          <button
+            class="filtro"
+            type="button"
+            aria-pressed="false"
+            data-filtro="professor"
+          >
+            Professores
+          </button>
+        </div>
+
+        <div class="usr-campo">
+          <label for="curso" class="usr-rotulo">Filtrar por curso</label>
+          <select id="curso">
+            <option value="" selected>Todos os cursos</option>
+            <option value="DSM">
+              Desenvolvimento de Software Multiplataforma
+            </option>
+            <option value="CDN">Ciência de Dados para Negócios</option>
+            <option value="CO">Controle de Obras</option>
+            <option value="ENGC">Engenharia Civil</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Lista de usuários -->
+      <section>
+        <h3 class="usr-secao">Usuários</h3>
+
+        <div class="usr-lista">
+          <!-- Alunos -->
+          <article class="usr-card" data-tipo="aluno" data-curso="DSM">
+            <div class="usr-card-topo">
+              <h4>Ana Beatriz</h4>
+              <span class="usr-status usr-status--andamento">Em andamento</span>
+            </div>
+            <p class="usr-perfil">Aluno · RA 999999999</p>
+            <p class="usr-info">
+              Desenvolvimento de Software Multiplataforma · 2º semestre
+            </p>
+
+            <p class="usr-horas">180h de 240h validadas</p>
+            <div
+              class="usr-barra"
+              role="progressbar"
+              aria-valuenow="180"
+              aria-valuemin="0"
+              aria-valuemax="240"
+            >
+              <div class="usr-barra-preenchimento" style="width: 75%"></div>
+            </div>
+
+            <a href="" class="usr-link"
+              >Ver ficha <span aria-hidden="true">›</span></a
+            >
+          </article>
+
+          <article class="usr-card" data-tipo="aluno" data-curso="CDN">
+            <div class="usr-card-topo">
+              <h4>Eliane Rocha</h4>
+              <span class="usr-status usr-status--equivalencia"
+                >Equivalência</span
+              >
+            </div>
+            <p class="usr-perfil">Aluno · RA 888888801</p>
+            <p class="usr-info">Ciência de Dados para Negócios · 4º semestre</p>
+
+            <p class="usr-horas">90h de 240h validadas</p>
+            <div
+              class="usr-barra"
+              role="progressbar"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              aria-valuemax="240"
+            >
+              <div class="usr-barra-preenchimento" style="width: 37.5%"></div>
+            </div>
+
+            <a href="" class="usr-link"
+              >Ver ficha <span aria-hidden="true">›</span></a
+            >
+          </article>
+
+          <article class="usr-card" data-tipo="aluno" data-curso="DSM">
+            <div class="usr-card-topo">
+              <h4>Lucas Almeida</h4>
+              <span class="usr-status usr-status--andamento">Em andamento</span>
+            </div>
+            <p class="usr-perfil">Aluno · RA 888888802</p>
+            <p class="usr-info">
+              Desenvolvimento de Software Multiplataforma · 3º semestre
+            </p>
+
+            <p class="usr-horas">150h de 240h validadas</p>
+            <div
+              class="usr-barra"
+              role="progressbar"
+              aria-valuenow="150"
+              aria-valuemin="0"
+              aria-valuemax="240"
+            >
+              <div class="usr-barra-preenchimento" style="width: 62.5%"></div>
+            </div>
+
+            <a href="" class="usr-link"
+              >Ver ficha <span aria-hidden="true">›</span></a
+            >
+          </article>
+
+          <article class="usr-card" data-tipo="aluno" data-curso="ENGC">
+            <div class="usr-card-topo">
+              <h4>Mariana Souza</h4>
+              <span class="usr-status usr-status--pendente">Pendente</span>
+            </div>
+            <p class="usr-perfil">Aluno · RA 888888803</p>
+            <p class="usr-info">Engenharia Civil · 1º semestre</p>
+
+            <p class="usr-horas">40h de 120h validadas</p>
+            <div
+              class="usr-barra"
+              role="progressbar"
+              aria-valuenow="40"
+              aria-valuemin="0"
+              aria-valuemax="120"
+            >
+              <div class="usr-barra-preenchimento" style="width: 33%"></div>
+            </div>
+
+            <a href="" class="usr-link"
+              >Ver ficha <span aria-hidden="true">›</span></a
+            >
+          </article>
+
+          <!-- Professores -->
+          <article class="usr-card" data-tipo="professor" data-curso="DSM CDN">
+            <div class="usr-card-topo">
+              <h4>Prof. Carlos Mendes</h4>
+              <span class="usr-status usr-status--professor">Professor</span>
+            </div>
+            <p class="usr-perfil">2 cursos vinculados</p>
+
+            <ul class="usr-cursos">
+              <li>Desenvolvimento de Software Multiplataforma</li>
+              <li>Ciência de Dados para Negócios</li>
+            </ul>
+
+            <div class="usr-acoes">
+              <button type="button" class="usr-acao">Alterar vínculos</button>
+              <button type="button" class="usr-acao">Adicionar curso</button>
+            </div>
+          </article>
+
+          <article class="usr-card" data-tipo="professor" data-curso="CO ENGC">
+            <div class="usr-card-topo">
+              <h4>Profa. Renata Alves</h4>
+              <span class="usr-status usr-status--professor">Professor</span>
+            </div>
+            <p class="usr-perfil">2 cursos vinculados</p>
+
+            <ul class="usr-cursos">
+              <li>Controle de Obras</li>
+              <li>Engenharia Civil</li>
+            </ul>
+
+            <div class="usr-acoes">
+              <button type="button" class="usr-acao">Alterar vínculos</button>
+              <button type="button" class="usr-acao">Adicionar curso</button>
+            </div>
+          </article>
+
+          <article class="usr-card" data-tipo="professor" data-curso="DSM">
+            <div class="usr-card-topo">
+              <h4>Prof. Eduardo Lima</h4>
+              <span class="usr-status usr-status--professor">Professor</span>
+            </div>
+            <p class="usr-perfil">1 curso vinculado</p>
+
+            <ul class="usr-cursos">
+              <li>Desenvolvimento de Software Multiplataforma</li>
+            </ul>
+
+            <div class="usr-acoes">
+              <button type="button" class="usr-acao">Alterar vínculos</button>
+              <button type="button" class="usr-acao">Adicionar curso</button>
+            </div>
+          </article>
+        </div>
+
+        <p class="sem-resultados" hidden>Nenhum usuário encontrado.</p>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="home.html" class="bottom-nav__item" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+          />
+        </svg>
+        <span>Início</span>
+      </a>
+
+      <a href="usuarios.html" class="bottom-nav__item is-active">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="9" cy="8" r="3.5" />
+          <path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6" />
+          <path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2.2.7 3.5 2.6 3.5 5.7" />
+        </svg>
+        <span>Usuários</span>
+      </a>
+
+      <a href="acessos.html" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3 5 6v5c0 4.5 3 8.2 7 10 4-1.8 7-5.5 7-10V6z" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+        <span>Acessos</span>
+      </a>
+    </nav>
+
+    <script src="../../js/components/menu-navbar.js"></script>
+    <script src="../../js/pages/secretaria/usuarios.js"></script>
+  </body>
+</html>

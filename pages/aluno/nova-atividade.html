@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/components/menu-navbar.css" />
+    <link rel="stylesheet" href="../../styles/components/header.css" />
+    <link rel="stylesheet" href="../../styles/components/btn-voltar.css" />
+    <link rel="stylesheet" href="../../styles/pages/aluno/nova-atividade.css" />
+    <link rel="stylesheet" href="../../styles/responsividade.css" />
+    <script defer src="../../js/components/menu-responsivo.js"></script>
+
+    <title>Nova atividade | SITE</title>
+  </head>
+
+  <body>
+    <header>
+      <span class="info-SITE">
+        <button
+          type="button"
+          class="btn-voltar"
+          aria-label="Voltar"
+          data-voltar="estagios.html"
+        ></button>
+        SITE - Sistema Integrado de Trabalho e Estágio
+      </span>
+      <div class="header-info">
+        <div class="header-info-text">
+          <h2>Nova atividade</h2>
+          <p>Selecione o que deseja cadastrar</p>
+        </div>
+        <div class="header-info-icon">
+          <img
+            src="../../assets/icons/icon-notificacao-on.svg"
+            alt="Notificações existentes"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="modalidades-lista">
+        <a href="novo-estagio.html" class="card-modalidade">
+          <h3>Estágio</h3>
+          <p>Atividade profissional supervisionada</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
+
+        <a href="" class="card-modalidade">
+          <h3>Equivalência</h3>
+          <p>Reconhecimento de horas acadêmicas</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true"> → </span></span
+          >
+        </a>
+
+        <a href="" class="card-modalidade">
+          <h3>Iniciação Científica</h3>
+          <p>Projeto de investigação acadêmica</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
+
+        <a href="" class="card-modalidade">
+          <h3>Monitoria</h3>
+          <p>Apoio a atividades de ensino</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
+
+        <a href="" class="card-modalidade">
+          <h3>Pesquisa e Extensão</h3>
+          <p>Projeto de pesquisa ou extensão</p>
+          <span class="card-modalidade-link"
+            >Selecionar <span aria-hidden="true">→</span></span
+          >
+        </a>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="home.html" class="bottom-nav__item" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+          />
+        </svg>
+        <span>Início</span>
+      </a>
+
+      <a href="estagios.html" class="bottom-nav__item is-active">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2" />
+          <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
+        </svg>
+        <span>Estágios</span>
+      </a>
+
+      <a href="#perfil" class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+        </svg>
+        <span>Perfil</span>
+      </a>
+    </nav>
+
+    <script src="../../js/pages/aluno/nova-atividade.js"></script>
+    <script src="../../js/components/menu-navbar.js"></script>
+    <script src="../../js/components/btn-voltar.js"></script>
+  </body>
+</html>
