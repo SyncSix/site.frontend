@@ -1,0 +1,307 @@
+@media (min-width: 768px) {
+  :root {
+    --colunas-pares: repeat(2, minmax(0, 1fr));
+  }
+
+  html:has(> body > .bottom-nav) {
+    --margem-pagina: clamp(1.5rem, 3vw, 3rem);
+    --largura-conteudo: 76rem;
+    --reserva-navegacao: calc(4.75rem + env(safe-area-inset-bottom));
+    scroll-padding-block-end: var(--reserva-navegacao);
+  }
+
+  html:has(.btn-nova-atividade) {
+    scroll-padding-block-end: calc(var(--reserva-navegacao) + 5rem);
+  }
+
+  body:has(> .bottom-nav) {
+    min-block-size: 100vh;
+    padding-bottom: var(--reserva-navegacao);
+  }
+
+  body:has(> .bottom-nav) > header {
+    padding-block: 1.5rem;
+    padding-inline: max(
+      var(--margem-pagina),
+      (100% - var(--largura-conteudo)) / 2
+    );
+  }
+
+  body:has(> .bottom-nav) > main {
+    inline-size: min(
+      100% - 2 * var(--margem-pagina),
+      var(--limite-pagina, var(--largura-conteudo))
+    );
+    max-width: none;
+    margin: 1.5rem auto;
+    padding: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .info-SITE:has(> .btn-voltar) {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .info-SITE > .btn-voltar {
+    position: static;
+    flex: none;
+  }
+
+  /* No tablet, a navegação continua no rodapé. */
+  .bottom-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bottom-nav__item {
+    max-inline-size: 12rem;
+  }
+
+  /* Grades de cards e indicadores. */
+  :is(
+    .lista-atividades,
+    .modalidades-lista,
+    .lancamentos,
+    .alunos,
+    .usr-lista,
+    .ace-fila,
+    .ace-historico
+  ) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--largura-card, 19rem)), 1fr));
+  }
+
+  :is(.lancamentos, .usr-lista) {
+    --largura-card: 20rem;
+  }
+
+  :is(.visao-geral-grid, .sec-indicadores) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+  }
+
+  :is(.infos, .perfil, .home-professor, .ficha, .relatorio, .ace, .sec-acoes) {
+    display: grid;
+    grid-template-columns: var(--colunas-pares);
+  }
+
+  :is(.infos > .estagio-atual, .perfil > .card-horas, .perfil > .card-info:last-child,
+      .home-professor > .visao-geral, .relatorio > .filtro-turma, .ace > section:not(.ace-resumo)) {
+    grid-column: 1 / -1;
+  }
+
+  :is(.infos > *, .modalidades-lista) {
+    margin: 0;
+  }
+
+  .infos > .progress-card {
+    max-width: none;
+  }
+
+  :is(.btn-nova-atividade, .btn-avaliacoes, main > .botao, main > .botao-claro) {
+    grid-column: 1 / -1;
+    align-self: end;
+    justify-self: end;
+    inline-size: min(100%, 18rem);
+  }
+
+  .btn-nova-atividade {
+    bottom: calc(var(--reserva-navegacao) + 1rem);
+  }
+
+  .card-modalidade-link {
+    margin-block-start: auto;
+  }
+
+  main:has(> .info + .documento) {
+    display: grid;
+    grid-template-columns: var(--colunas-pares);
+  }
+
+  main:has(> .info + .documento) > .info {
+    grid-column: 1 / -1;
+  }
+
+  .documento > button {
+    margin-block-start: auto;
+  }
+
+  main:has(> .opcao) {
+    --limite-pagina: 64rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Formulários e filtros mantêm a sequência do HTML. */
+  main:has(> .grupo),
+  .avaliar {
+    --limite-pagina: 64rem;
+  }
+
+  :is(.grupo, .avaliar-form, .lista-alunos, .usr-topo) {
+    display: grid;
+    grid-template-columns: var(--colunas-pares);
+  }
+
+  :is(.grupo > .grupo-titulo, .grupo > .linha, .grupo > .campo:only-of-type,
+      .avaliar-form > .card:has(> textarea), .avaliar-form > .btn-primario,
+      .lista-alunos > :not(.busca, .filtro-turma),
+      .usr-topo > .busca) {
+    grid-column: 1 / -1;
+  }
+
+  .grupo > .linha:not(.estado) {
+    grid-template-columns: var(--colunas-pares);
+  }
+
+  .grupo > .linha.estado {
+    grid-template-columns: minmax(0, 1fr) minmax(5.625rem, 25%);
+  }
+
+  :is(.avaliar-form, .lista-alunos) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  .decisao-opcoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .decisao-opcoes > .opcao {
+    position: relative;
+  }
+
+  .avaliar-form > .btn-primario {
+    justify-self: end;
+    inline-size: min(100%, 18rem);
+  }
+
+  .lista-alunos > .busca {
+    align-self: end;
+  }
+
+  .selects > .campo-select:has(> [id="curso"]) {
+    flex-grow: 2;
+  }
+
+  .filtros {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .busca:focus-within {
+    outline: 2px solid var(--nav-active);
+    outline-offset: 2px;
+  }
+
+  .usr-topo > .filtros {
+    align-self: end;
+  }
+
+  :is(.usr-card-topo, .ace-card-topo, .ace-hist-topo, .ficha-topo,
+      .ficha-item, .card-atividade-topo, .item-pendencia-topo) {
+    flex-wrap: wrap;
+  }
+
+  .ace-busca {
+    align-self: center;
+  }
+
+  .ace-card:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ace-decisao {
+    margin-block-start: auto;
+  }
+
+  .ace-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    max-block-size: calc(100dvh - 2rem);
+    overflow: auto;
+  }
+
+  /* A autenticação usa uma coluna central e pode rolar em janelas baixas. */
+  body:not(:has(> .bottom-nav)) > main {
+    inline-size: min(100% - 3rem, var(--limite-autenticacao, 29.375rem));
+    max-width: none;
+    height: auto;
+    min-block-size: 100dvh;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+
+  body:not(:has(> .bottom-nav)) > main:has(.btn-form-login) {
+    --limite-autenticacao: 26.25rem;
+  }
+
+  body:not(:has(> .bottom-nav)) > main:has(> .menu-perfil) {
+    --limite-autenticacao: 42rem;
+  }
+
+  main:has(> .menu-perfil) > :is(.menu-perfil, .formularios) {
+    max-width: none;
+  }
+
+  .form-perfil {
+    grid-template-columns: var(--colunas-pares);
+  }
+
+  .form-perfil > :is(label:has(> select), button[type="submit"]) {
+    grid-column: 1 / -1;
+  }
+
+  .popup-overlay .popup {
+    max-block-size: calc(100dvh - max(2rem, env(safe-area-inset-top) + 1rem));
+    overflow: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  html:has(> body > .bottom-nav) {
+    --largura-menu: clamp(12rem, 18vw, 16rem);
+    --reserva-navegacao: 0px;
+  }
+
+  body:has(> .bottom-nav) {
+    padding-inline-start: var(--largura-menu);
+  }
+
+  .bottom-nav {
+    inset: 0 auto 0 0;
+    inline-size: var(--largura-menu);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: clamp(0.75rem, 4vh, 2rem) 0.75rem;
+    overflow-y: auto;
+  }
+
+  .bottom-nav__item {
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 0.75rem;
+    max-inline-size: none;
+    padding: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .bottom-nav__item svg {
+    flex-shrink: 0;
+  }
+
+  main:has(> .info + .documento) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  html:has(> body > .bottom-nav) {
+    --largura-conteudo: 86rem;
+  }
+}
