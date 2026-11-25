@@ -59,4 +59,4 @@ campo("barra").style.width = `${Math.min((validadas / total) * 100, 100)}%`;
 campo("barra-aria").setAttribute("aria-valuenow", validadas);
 campo("barra-aria").setAttribute("aria-valuemax", total);
 
-document.title = `Ficha · ${nome}`;
+document.title = `Ficha de ${nome} | SITE`;
